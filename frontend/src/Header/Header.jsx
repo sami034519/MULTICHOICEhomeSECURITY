@@ -210,7 +210,7 @@ function Header() {
               <FaWhatsapp />
             </a>
            <div className="bg-yellow-500 pt-1 rounded" onClick={handleClick}>
-      <button className="flex items-center gap-2 bg-black text-white lg:text-base px-1 text-sm py-2 lg:px-4 lg:py-2 rounded hover:bg-green-600 transition duration-300">
+      <button className="flex items-center gap-2 bg-black text-white lg:text-base px-1 text-sm py-2 lg:px-4 lg:py-2 rounded hover:bg-green-600 transition duration-300 whitespace-nowrap">
         <FaPhoneAlt />
         CONTACT NOW
       </button>
