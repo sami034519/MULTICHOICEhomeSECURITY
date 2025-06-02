@@ -30,7 +30,7 @@ function Crousal7({ active }) {
 
       {/* Overlay Div */}
       <div
-        className={`absolute lg:w-[60%] w-[210px] top-0 left-0 h-[200px] lg:h-[80vh] bg-black bg-opacity-70 transition-all duration-1000 ${
+        className={`absolute lg:w-[60%] w-[80%] top-0 left-0 h-[200px] lg:h-[80vh] bg-black bg-opacity-70 transition-all duration-1000 ${
           animate ? "animate__animated animate__backInLeft w-1/2" : "w-0"
         }`}
       ></div>
