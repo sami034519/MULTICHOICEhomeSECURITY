@@ -125,7 +125,14 @@ function Crousal7({ active }) {
           >
             EARLY DETECTION
           </h1>
-          <div>
+          <p className={`lg:text-[60px] text-3xl font-extrabold mt-3 lg:font-bold leading-7 py-4 lg:mb-1 lg:mt-16 text-yellow-400 ${
+                animate
+                  ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
+                  : ""
+              }`}>
+            FIRE DETECTION <br /> SYSTEM
+          </p>
+          {/* <div>
             <h1
               className={`lg:text-[60px] mb-3 text-3xl font-extrabold lg:font-bold lg:mb-1 lg:mt-16 text-yellow-400 ${
                 animate
@@ -144,7 +151,7 @@ function Crousal7({ active }) {
             >
               SYSYTEM
             </h1>
-          </div>
+          </div> */}
           <p
             className={`lg:text-lg text-xs w-[40%] ${
               animate

@@ -124,7 +124,14 @@ function Crousal1({ active }) {
           >
             Welcome To
           </h1>
-          <div>
+          <p className={`lg:text-[60px] text-3xl font-extrabold mt-3 lg:font-bold leading-7 py-4 lg:mb-1 lg:mt-16 text-white ${
+                animate
+                  ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
+                  : ""
+              }`}>
+            MULTICHOICE <br /> HOME SECURITY
+          </p>
+          {/* <div>
             <h1
               className={`lg:text-[60px] text-3xl font-extrabold mt-3 lg:font-bold lg:mb-1 lg:mt-16 text-white ${
                 animate
@@ -143,7 +150,7 @@ function Crousal1({ active }) {
             >
               HOME SECURITY
             </h1>
-          </div>
+          </div> */}
           <p
             className={`lg:text-lg text-xs w-[40%] ${
               animate

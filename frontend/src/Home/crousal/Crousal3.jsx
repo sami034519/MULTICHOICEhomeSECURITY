@@ -123,7 +123,14 @@ function Crousal3({ active }) {
           >
             STRONG BOUNDRIES
           </h1>
-          <div>
+          <p className={`lg:text-[60px] text-3xl font-extrabold mt-3 lg:font-bold leading-7 py-4 lg:mb-1 lg:mt-16 text-yellow-400 ${
+                animate
+                  ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
+                  : ""
+              }`}>
+            DURABLE FENCES <br /> FOR PROTECTION
+          </p>
+          {/* <div>
             <h1
               className={`lg:text-[60px] mb-3 text-3xl font-extrabold lg:font-bold lg:mb-1 lg:mt-16 text-yellow-400 ${
                 animate
@@ -142,7 +149,7 @@ function Crousal3({ active }) {
             >
               FOR PROTECTION
             </h1>
-          </div>
+          </div> */}
           <p
             className={`lg:text-lg text-xs w-[40%] ${
               animate

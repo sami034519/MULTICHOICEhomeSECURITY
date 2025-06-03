@@ -1,14 +1,17 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Header/Header';
-import { BrowserRouter } from 'react-router-dom';
-import Main from "./Home/crousal/Main"
+import Main from './Home/crousal/Main';
+import Footer from './Footer/Footer';
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Header />
-      <Main/>
-
-    </BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Main />} />
+      </Routes>
+      <Footer/>
+    </Router>
   );
 }
 
