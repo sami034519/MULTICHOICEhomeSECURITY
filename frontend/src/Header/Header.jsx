@@ -160,7 +160,8 @@ function Header() {
         {/* Topbar */}
         <div
           id="topbar"
-          className="bg-yellow-400 text-black text-lg px-4 flex justify-between lg:justify-around items-center py-2 z-40"
+         
+          className=" text-black text-lg bg-yellow-500 px-4 flex justify-between lg:justify-around items-center py-2 z-40"
         >
           <div className="lg:flex hidden items-center space-x-4">
             <div className="flex items-center gap-1 border-r-2 border-white pr-3">
@@ -209,7 +210,7 @@ function Header() {
             >
               <FaWhatsapp />
             </a>
-           <div className="bg-yellow-500 pt-1 rounded" onClick={handleClick}>
+           <div className="bg-yellow-200 pt-1 rounded" onClick={handleClick}>
       <button className="flex items-center gap-2 bg-black text-white lg:text-base px-1 text-sm py-2 lg:px-4 lg:py-2 rounded hover:bg-green-600 transition duration-300 whitespace-nowrap">
         <FaPhoneAlt />
         CONTACT NOW
@@ -247,7 +248,7 @@ function Header() {
                         `${linkStyle} ${
                           isActive
                             ? activeStyle
-                            : "hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400"
+                            : "hover:text-yellow-500 hover:border-b-2 hover:border-yellow-500"
                         }`
                       }
                     >
@@ -259,9 +260,9 @@ function Header() {
                           <Link
                             key={index}
                             to={service.path}
-                            className="group flex items-center px-4 py-2 rounded text-lg text-gray-800 hover:bg-yellow-400 hover:text-white transition"
+                            className="group flex items-center px-4 py-2 rounded text-lg text-gray-800 hover:bg-yellow-500 hover:text-white transition"
                           >
-                            <span className="mr-2 text-yellow-400 group-hover:text-white">
+                            <span className="mr-2 text-yellow-500 group-hover:text-white">
                               {service.icon}
                             </span>
                             {service.name}
@@ -278,7 +279,7 @@ function Header() {
                       `${linkStyle} ${
                         isActive
                           ? activeStyle
-                          : "hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400 "
+                          : "hover:text-yellow-500 hover:border-b-2 hover:border-yellow-500 "
                       }`
                     }
                   >
@@ -311,7 +312,7 @@ function Header() {
                 `w-full text-left ${linkStyle} ${
                   isActive
                     ? activeStyle
-                    : "hover:text-yellow-400  hover:border-b-2 hover:border-yellow-400 "
+                    : "hover:text-yellow-500  hover:border-b-2 hover:border-yellow-500 "
                 }`
               }
             >
@@ -346,7 +347,7 @@ function Header() {
                   `flex items-center gap-2 py-1 ${linkStyle} ${
                     isActive
                       ? activeStyle
-                      : "hover:text-yellow-400  hover:border-b-2 hover:border-yellow-400 "
+                      : "hover:text-yellow-500  hover:border-b-2 hover:border-yellow-500 "
                   }`
                 }
               >
@@ -365,7 +366,7 @@ function Header() {
             `${linkStyle} ${
               isActive
                 ? activeStyle
-                : "hover:text-yellow-400  hover:border-b-2 hover:border-yellow-400 "
+                : "hover:text-yellow-500  hover:border-b-2 hover:border-yellow-500 "
             }`
           }
         >

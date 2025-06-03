@@ -20,7 +20,7 @@ const HeroCarousel = () => {
       autoplay={{ delay: 5000 }}
       pagination={{ clickable: true }}
       loop={true}
-      className="w-full lg:h-[80vh] h-[200px] relative z-30 lg:mt-32 mt-28"
+      className="w-full lg:h-[80vh] h-[75vh] relative z-30 lg:mt-32 mt-28"
     >
       <SwiperSlide>
         {({ isActive }) => <Crousal1 active={isActive} />}
@@ -29,7 +29,7 @@ const HeroCarousel = () => {
         {({ isActive }) => <Crousal2 active={isActive} />}
       </SwiperSlide>
        <SwiperSlide>
-        {({ isActive }) => <Crousal3 active={isActive} />}
+        {({ isActive }) => <Crousal6 active={isActive} />}
       </SwiperSlide>
        <SwiperSlide>
         {({ isActive }) => <Crousal4 active={isActive} />}
@@ -38,7 +38,7 @@ const HeroCarousel = () => {
         {({ isActive }) => <Crousal5 active={isActive} />}
       </SwiperSlide>
        <SwiperSlide>
-        {({ isActive }) => <Crousal6 active={isActive} />}
+        {({ isActive }) => <Crousal3 active={isActive} />}
       </SwiperSlide>
       <SwiperSlide>
         {({ isActive }) => <Crousal7 active={isActive} />}
