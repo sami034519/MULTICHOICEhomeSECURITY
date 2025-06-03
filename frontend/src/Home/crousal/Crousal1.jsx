@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import crousal1 from "../../images/securitycrousal1.jpg";
-import mobilecrousal1 from "../../images/mobilecrousal1.jpg"
+import mobilecrousal1 from "../../images/mobilecrousal1.jpg";
 import "animate.css";
 
 function Crousal1({ active }) {
@@ -32,7 +32,7 @@ function Crousal1({ active }) {
 
         {/* Overlay Div */}
         <div
-          className={`absolute lg:w-[40%] w-[301px] top-0 left-0 h-[200px] lg:h-[80vh] bg-black bg-opacity-5 transition-all duration-1000 ${
+          className={`absolute lg:w-[40%] w-[301px] top-0 left-0 h-[200px] lg:h-[80vh] bg-black bg-opacity-30 transition-all duration-1000 ${
             animate ? "animate__animated animate__backInLeft w-1/2" : "w-0"
           }`}
         ></div>
@@ -91,7 +91,7 @@ function Crousal1({ active }) {
       </div>
 
       {/* mobile */}
-       <div className=" block lg:hidden relative w-full h-[80vh] overflow-hidden z-30">
+      <div className=" block lg:hidden relative w-full h-[80vh] overflow-hidden z-30">
         {/* Background Image */}
         <img
           loading="lazy"
@@ -126,7 +126,7 @@ function Crousal1({ active }) {
           </h1>
           <div>
             <h1
-              className={`lg:text-[60px] text-3xl font-extrabold lg:font-bold lg:mb-1 lg:mt-16 text-white ${
+              className={`lg:text-[60px] text-3xl font-extrabold mt-3 lg:font-bold lg:mb-1 lg:mt-16 text-white ${
                 animate
                   ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
                   : ""
@@ -135,7 +135,7 @@ function Crousal1({ active }) {
               MULTICHOICE
             </h1>
             <h1
-              className={`lg:text-[60px] text-3xl font-extrabold lg:font-bold mb-2 lg:mb-10 lg:mt-6 text-white ${
+              className={`lg:text-[60px] text-3xl font-extrabold lg:font-bold mb-3 lg:mb-10 lg:mt-6 text-white ${
                 animate
                   ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
                   : ""

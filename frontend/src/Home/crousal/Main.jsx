@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import Introduction from "../Introduction/Introduction";
 
 import Crousal1 from "./Crousal1";
 import Crousal2 from "./Crousal2";
@@ -15,6 +16,7 @@ import Crousal7 from "./Crousal7";
 
 const HeroCarousel = () => {
   return (
+    <>
     <Swiper
       modules={[Autoplay, Pagination]}
       autoplay={{ delay: 5000 }}
@@ -45,6 +47,8 @@ const HeroCarousel = () => {
       </SwiperSlide>
       
     </Swiper>
+    <Introduction/>
+    </>
   );
 };
 
