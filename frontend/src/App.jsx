@@ -9,6 +9,9 @@ import SmartAlarmSystem from './All services/SmartAlarmSystem';
 import ElectricFence from './All services/ElectricFence';
 import Solarenergy from './All services/Solarenergy';
 import Firedetection from './All services/Firedetection';
+import WhyChooseMultiChoice from './WHYchooseus/Whychoose';
+import OurStory from './Ourstory/Ourstory';
+import Contactus from './Contactus/Contactus';
 function App() {
   return (
     <Router>
@@ -21,6 +24,9 @@ function App() {
             <Route path='/services/electric-fence' element={<ElectricFence />} />
              <Route path='/services/solar-energy' element={<Solarenergy />} />
              <Route path='/services/fire-detection-system' element={<Firedetection />} />
+              <Route path='/multichoice' element={<WhyChooseMultiChoice />} />
+              <Route path='/ourstory' element={<OurStory />} />
+               <Route path='/contact' element={<Contactus />} />
       </Routes>
       <Footer/>
     </Router>

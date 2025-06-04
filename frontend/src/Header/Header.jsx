@@ -83,9 +83,10 @@ function Header() {
 
   const navItems = [
     { name: "HOME", path: "/" },
-    { name: "SERVICES", path: "/services" },
-    { name: "BLOGS", path: "/blogs" },
-    { name: "TEAMS", path: "/teams" },
+    { name: "SERVICES", path: null, 
+    submenu: true,},
+    { name: "WHY MULTICHOICE", path: "/multichoice" },
+    { name: "OUR STORY", path: "/ourstory" },
     { name: "CONTACT US", path: "/contact" },
   ];
 
@@ -225,148 +226,131 @@ function Header() {
               <FaBars />
             </button>
             <div className="hidden lg:flex space-x-6 items-center relative">
-              {navItems.map((item) =>
-                item.name === "SERVICES" ? (
-                  <div
-                    key={item.name}
-                    className="relative"
-                    onMouseEnter={() => setShowServicesMenu(true)}
-                    onMouseLeave={() => setShowServicesMenu(false)}
-                  >
-                    <NavLink
-                      to={item.path}
-                      className={({ isActive }) =>
-                        `${linkStyle} ${
-                          isActive
-                            ? activeStyle
-                            : "hover:text-yellow-500 hover:border-b-2 hover:border-yellow-500"
-                        }`
-                      }
-                    >
-                      {item.name}
-                    </NavLink>
-                    {showServicesMenu && (
-                      <div className="absolute top-full left-0 bg-white shadow-lg border mt-2 rounded z-50 w-[40rem] grid grid-cols-2 gap-2 p-4">
-                        {servicesSubmenu.map((service, index) => (
-                          <Link
-                            key={index}
-                            to={service.path}
-                            className="group flex items-center px-4 py-2 rounded text-lg text-gray-800 hover:bg-yellow-500 hover:text-white transition"
-                          >
-                            <span className="mr-2 text-yellow-500 group-hover:text-white">
-                              {service.icon}
-                            </span>
-                            {service.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <NavLink
-                    key={item.path}
-                    to={item.path}
-                    className={({ isActive }) =>
-                      `${linkStyle} ${
-                        isActive
-                          ? activeStyle
-                          : "hover:text-yellow-500 hover:border-b-2 hover:border-yellow-500 "
-                      }`
-                    }
-                  >
-                    {item.name}
-                  </NavLink>
-                )
-              )}
-            </div>
+  {navItems.map((item) =>
+    item.name === "SERVICES" ? (
+      <div
+        key={item.name}
+        className="relative"
+        onMouseEnter={() => setShowServicesMenu(true)}
+        onMouseLeave={() => setShowServicesMenu(false)}
+      >
+        <span
+          className={`${linkStyle} hover:text-yellow-500 hover:border-b-2 hover:border-yellow-500 cursor-pointer`}
+        >
+          {item.name}
+        </span>
+        {showServicesMenu && (
+          <div className="absolute top-full left-0 bg-white shadow-lg border mt-2 rounded z-50 w-[40rem] grid grid-cols-2 gap-2 p-4">
+            {servicesSubmenu.map((service, index) => (
+              <Link
+                key={index}
+                to={service.path}
+                className="group flex items-center px-4 py-2 rounded text-lg text-gray-800 hover:bg-yellow-500 hover:text-white transition"
+              >
+                <span className="mr-2 text-yellow-500 group-hover:text-white">
+                  {service.icon}
+                </span>
+                {service.name}
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    ) : (
+      <NavLink
+        key={item.path}
+        to={item.path}
+        className={({ isActive }) =>
+          `${linkStyle} ${
+            isActive
+              ? activeStyle
+              : "hover:text-yellow-500 hover:border-b-2 hover:border-yellow-500"
+          }`
+        }
+      >
+        {item.name}
+      </NavLink>
+    )
+  )}
+</div>
+
           </div>
 
           {/* Mobile Slide Menu */}
           {/* Mobile Slide Menu */}
+         <div
+  className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+    menuOpen ? "max-h-[1000px]" : "max-h-0"
+  } bg-white`}
+>
+  <div className="flex flex-col px-4 pb-4 space-y-2">
+    {navItems.map((item) =>
+      item.name === "SERVICES" ? (
+        <div key={item.name}>
+          {/* SERVICES title and submenu toggle */}
+          <div className="flex justify-between items-center w-full">
+            <span
+              className={`w-full text-left ${linkStyle} hover:text-yellow-500 hover:border-b-2 hover:border-yellow-500 cursor-pointer`}
+            >
+              {item.name}
+            </span>
+
+            <button
+              onClick={() => setMobileSubmenuOpen(!mobileSubmenuOpen)}
+              className="ml-2 text-gray-700 focus:outline-none text-lg"
+              aria-label="Toggle Services Submenu"
+            >
+              {mobileSubmenuOpen ? "▲" : "▼"}
+            </button>
+          </div>
+
+          {/* Submenu Items */}
           <div
-            className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-              menuOpen ? "max-h-[1000px]" : "max-h-0"
-            } bg-white`}
+            className={`pl-4 overflow-hidden transition-all duration-300 ${
+              mobileSubmenuOpen ? "max-h-96" : "max-h-0"
+            }`}
           >
-            <div className="flex flex-col px-4 pb-4 space-y-2">
-              {navItems.map((item) =>
-                item.name === "SERVICES" ? (
-                  <div key={item.name}>
-                    {/* Main SERVICES NavLink and Toggle Button */}
-                    <div className="flex justify-between items-center w-full">
-                      <NavLink
-                        to={item.path}
-                        onClick={() => {
-                          setMenuOpen(false);
-                        }}
-                        className={({ isActive }) =>
-                          `w-full text-left ${linkStyle} ${
-                            isActive
-                              ? activeStyle
-                              : "hover:text-yellow-500  hover:border-b-2 hover:border-yellow-500 "
-                          }`
-                        }
-                      >
-                        {item.name}
-                      </NavLink>
-
-                      {/* Toggle for Submenu */}
-                      <button
-                        onClick={() => setMobileSubmenuOpen(!mobileSubmenuOpen)}
-                        className="ml-2 text-gray-700 focus:outline-none text-lg"
-                        aria-label="Toggle Services Submenu"
-                      >
-                        {mobileSubmenuOpen ? "▲" : "▼"}
-                      </button>
-                    </div>
-
-                    {/* Submenu Items */}
-                    <div
-                      className={`pl-4 overflow-hidden transition-all duration-300 ${
-                        mobileSubmenuOpen ? "max-h-96" : "max-h-0"
-                      }`}
-                    >
-                      {servicesSubmenu.map((sub) => (
-                        <NavLink
-                          key={sub.path}
-                          to={sub.path}
-                          onClick={() => {
-                            setMenuOpen(false);
-                            setMobileSubmenuOpen(false);
-                          }}
-                          className={({ isActive }) =>
-                            `flex items-center gap-2 py-1 ${linkStyle} ${
-                              isActive
-                                ? activeStyle
-                                : "hover:text-yellow-500  hover:border-b-2 hover:border-yellow-500 "
-                            }`
-                          }
-                        >
-                          {sub.icon}
-                          {sub.name}
-                        </NavLink>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  <NavLink
-                    key={item.path}
-                    to={item.path}
-                    onClick={() => setMenuOpen(false)}
-                    className={({ isActive }) =>
-                      `${linkStyle} ${
-                        isActive
-                          ? activeStyle
-                          : "hover:text-yellow-500  hover:border-b-2 hover:border-yellow-500 "
-                      }`
-                    }
-                  >
-                    {item.name}
-                  </NavLink>
-                )
-              )}
-            </div>
+            {servicesSubmenu.map((sub) => (
+              <NavLink
+                key={sub.path}
+                to={sub.path}
+                onClick={() => {
+                  setMenuOpen(false);
+                  setMobileSubmenuOpen(false);
+                }}
+                className={({ isActive }) =>
+                  `flex items-center gap-2 py-1 ${linkStyle} ${
+                    isActive
+                      ? activeStyle
+                      : "hover:text-yellow-500 hover:border-b-2 hover:border-yellow-500"
+                  }`
+                }
+              >
+                {sub.icon}
+                {sub.name}
+              </NavLink>
+            ))}
           </div>
+        </div>
+      ) : (
+        <NavLink
+          key={item.path}
+          to={item.path}
+          onClick={() => setMenuOpen(false)}
+          className={({ isActive }) =>
+            `${linkStyle} ${
+              isActive
+                ? activeStyle
+                : "hover:text-yellow-500 hover:border-b-2 hover:border-yellow-500"
+            }`
+          }
+        >
+          {item.name}
+        </NavLink>
+      )
+    )}
+  </div>
+</div>
         </div>
       </div>
     </>
