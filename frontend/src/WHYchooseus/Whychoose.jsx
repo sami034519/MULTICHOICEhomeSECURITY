@@ -1,6 +1,6 @@
 import React from "react";
 
-import whychhose1 from "../images/whychoose.jpg";
+import whychhose1 from "../images/whychoose3.jpg";
 import whychoose2 from "../images/whychoose2f.jpg";
 import Clients from "../Home/Clients/Clients";
 

@@ -125,7 +125,7 @@ const OurStory = () => {
         </div>
       </div>
       <div>
-        <img src={ourstory2} className="w-full" alt="" />
+        <img src={ourstory2} className="w-full mt-20" alt="" />
       </div>
       <div>
         <img src={homestructure} className="w-full" alt="" />
