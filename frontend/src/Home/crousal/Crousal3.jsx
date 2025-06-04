@@ -123,7 +123,7 @@ function Crousal3({ active }) {
           >
             STRONG BOUNDRIES
           </h1>
-          <p className={`lg:text-[60px] text-5xl font-extrabold mt-3 lg:font-bold leading-9 py-4 lg:mb-1 lg:mt-16 text-yellow-400 ${
+          <p className={`lg:text-[60px] text-5xl font-extrabold mt-3 lg:font-bold leading-10 py-4 lg:mb-1 lg:mt-16 text-yellow-400 ${
                 animate
                   ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
                   : ""
