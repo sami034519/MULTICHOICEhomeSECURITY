@@ -192,7 +192,7 @@ function Header() {
               <FaInstagram />
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/muhammadsamiullah659?igsh=b2l4ZGc2eGVwcjNl"
               className="text-red-500 bg-white text-3xl border-2 border-black  rounded-lg"
             >
               <FcGoogle />
