@@ -178,7 +178,7 @@ function Header() {
               <span>example@gmail.com</span>
             </div>
           </div>
-          <div className="flex  items-center space-x-2">
+          <div className="flex  items-center space-x-">
             <a
               href="https://facebook.com"
               className=" border-2 text-blue-500 bg-white text-3xl  border-black  rounded-lg"
@@ -186,13 +186,13 @@ function Header() {
               <FaFacebookF />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://www.instagram.com/muhammadsamiullah659?igsh=b2l4ZGc2eGVwcjNl.com"
               className="text-red-500 bg-white text-3xl border-2 border-black  rounded-lg"
             >
               <FaInstagram />
             </a>
             <a
-              href="https://www.instagram.com/muhammadsamiullah659?igsh=b2l4ZGc2eGVwcjNl"
+              href="https://google.com"
               className="text-red-500 bg-white text-3xl border-2 border-black  rounded-lg"
             >
               <FcGoogle />
