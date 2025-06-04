@@ -178,7 +178,7 @@ function Header() {
               <span>example@gmail.com</span>
             </div>
           </div>
-          <div className="flex  items-center space-x-">
+          <div className="flex  items-center space-x-2">
             <a
               href="https://facebook.com"
               className=" border-2 text-blue-500 bg-white text-3xl  border-black  rounded-lg"
