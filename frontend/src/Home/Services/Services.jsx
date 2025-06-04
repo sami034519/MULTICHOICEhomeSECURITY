@@ -30,32 +30,32 @@ function Services() {
           {
             img: smartalarm,
             title: "SMART ALARM SYSTEM",
-            path: "/services/smart-alarmsystem",
+            path: "/services/smart-alarm-system",
           },
           {
             img: cctv,
             title: "CCTV SURVELLIENCE",
-            path: "/services/cctv-service",
+            path: "/services/cctv-surveillance",
           },
           {
             img: doorautomation,
             title: "DOOR AUTOMATION",
-            path: "/services/door-automation",
+            path: "/services/smart-Door-automation",
           },
           {
             img: fencesystem,
             title: "ELECTRIC FENCE SYSTEM",
-            path: "/services/fence-system",
+            path: "/services/electric-fence",
           },
           {
             img: solarsystem,
             title: "HOME SOLAR SYSTEM",
-            path: "/services/solar-system",
+            path: "/services/solar-energy",
           },
           {
             img: firedetection,
             title: "AUTO FIRE DETECTION",
-            path: "/services/fiRE-detection",
+            path: "/services/fire-detection-system",
           },
         ].map((card, i) => (
           <Link
