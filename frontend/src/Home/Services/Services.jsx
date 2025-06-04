@@ -63,7 +63,7 @@ function Services() {
             to={card.path}
             className="flex flex-col items-center justify-center text-center max-w-96 gap-5 border-2 border-slate-200 pb-5
                          rounded-tl-3xl rounded-br-3xl overflow-hidden lg:w-[300px] w-80 transition-all duration-300 
-                         shadow-red-100 bg-slate-00 hover:shadow-yellow-500 hover:shadow-lg hover:bg-yellow-50 no-underline text-black"
+                         shadow-red-100 bg-slate-00 hover:shadow-yellow-500 bg-yellow-200 hover:shadow-lg hover:bg-yellow-50 no-underline text-black"
             data-aos="fade-up"
           >
             <div>

@@ -61,7 +61,7 @@ function Introduction() {
                 className="bg-yellow-500 rounded pt-1 max-w-[162px]"
                 data-aos="flip-up"
               >
-                <button className="bg-black hover:bg-green-800 text-white rounded text-lg font-medium px-4 py-2">
+                <button className="bg-black hover:bg-green-800 w-[162px] text-white rounded text-lg font-medium px-4 py-2">
                   CONTACT NOW
                 </button>
               </div>

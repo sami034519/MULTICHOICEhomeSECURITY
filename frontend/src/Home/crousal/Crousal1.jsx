@@ -102,7 +102,7 @@ function Crousal1({ active }) {
 
         {/* Overlay Div */}
         <div
-          className={`absolute lg:w-[40%] w-[301px] top-0 left-0  lg:h-[80vh] bg-black bg-opacity-10 transition-all duration-1000 ${
+          className={`absolute lg:w-[40%] w-screen top-0 left-0  lg:h-[80vh] bg-black bg-opacity-10 transition-all duration-1000 ${
             animate ? "animate__animated animate__backInLeft w-1/2" : "w-0"
           }`}
         ></div>
@@ -124,7 +124,7 @@ function Crousal1({ active }) {
           >
             Welcome To
           </h1>
-          <p className={`lg:text-[60px] text-3xl font-extrabold mt-3 lg:font-bold leading-7 py-4 lg:mb-1 lg:mt-16 text-white ${
+          <p className={`lg:text-[60px] text-4xl font-extrabold mt-3 lg:font-bold leading-7 py-4 lg:mb-1 lg:mt-16 text-white ${
                 animate
                   ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
                   : ""
@@ -152,7 +152,7 @@ function Crousal1({ active }) {
             </h1>
           </div> */}
           <p
-            className={`lg:text-lg text-xs w-[40%] ${
+            className={`lg:text-lg text-sm w-[40%] ${
               animate
                 ? "animate__animated animate__lightSpeedInLeft animate__delay-3s"
                 : ""

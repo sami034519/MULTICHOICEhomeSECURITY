@@ -101,7 +101,7 @@ function Crousal3({ active }) {
 
         {/* Overlay Div */}
         <div
-          className={`absolute lg:w-[60%] w-[310px] top-0 left-0 h-full lg:h-[80vh] bg-black bg-opacity-20 transition-all duration-1000 ${
+          className={`absolute lg:w-[60%] w-screen top-0 left-0 h-full lg:h-[80vh] bg-black bg-opacity-20 transition-all duration-1000 ${
             animate ? "animate__animated animate__backInLeft w-1/2" : "w-0"
           }`}
         ></div>
@@ -123,12 +123,12 @@ function Crousal3({ active }) {
           >
             STRONG BOUNDRIES
           </h1>
-          <p className={`lg:text-[60px] text-3xl font-extrabold mt-3 lg:font-bold leading-7 py-4 lg:mb-1 lg:mt-16 text-yellow-400 ${
+          <p className={`lg:text-[60px] text-5xl font-extrabold mt-3 lg:font-bold leading-9 py-4 lg:mb-1 lg:mt-16 text-yellow-400 ${
                 animate
                   ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
                   : ""
               }`}>
-            DURABLE FENCES <br /> FOR PROTECTION
+             FENCES FOR<br />  PROTECTION
           </p>
           {/* <div>
             <h1
@@ -151,7 +151,7 @@ function Crousal3({ active }) {
             </h1>
           </div> */}
           <p
-            className={`lg:text-lg text-xs w-[40%] ${
+            className={`lg:text-lg text-sm w-[40%] ${
               animate
                 ? "animate__animated animate__lightSpeedInLeft animate__delay-3s"
                 : ""

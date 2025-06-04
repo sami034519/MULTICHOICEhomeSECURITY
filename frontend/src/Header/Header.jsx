@@ -7,13 +7,14 @@ import {
   FaBolt,
   FaSun,
   FaFire,
+  FaInstagram,
 } from 'react-icons/fa';
 import {
   FaPhoneAlt,
   
   FaWhatsapp,
   FaFacebookF,
-  FaTwitter,
+ 
   FaLinkedinIn,
   FaBars,
  
@@ -177,28 +178,28 @@ function Header() {
               <span>example@gmail.com</span>
             </div>
           </div>
-          <div className="flex items-center space-x-3">
+          <div className="flex  items-center space-x-3">
             <a
               href="https://facebook.com"
-              className="hover:bg-blue-500 border-2 border-black p-1 rounded-lg"
+              className=" border-2 text-blue-500 bg-white text-3xl  border-black  rounded-lg"
             >
               <FaFacebookF />
             </a>
             <a
               href="https://twitter.com"
-              className="hover:bg-blue-400 border-2 border-black p-1 rounded-lg"
+              className="text-red-500 bg-white text-3xl border-2 border-black  rounded-lg"
             >
-              <FaTwitter />
+              <FaInstagram />
             </a>
             <a
-              href="https://google.com"
-              className="hover:bg-red-500 border-2 border-black p-1 rounded-lg"
+              href="https://instagram.com"
+              className="text-red-500 bg-white text-3xl border-2 border-black  rounded-lg"
             >
               <FcGoogle />
             </a>
             <a
               href="https://linkedin.com"
-              className="hover:bg-blue-600 border-2 border-black p-1 rounded-lg"
+              className="text-blue-600 bg-white text-3xl border-2 border-black  rounded-lg"
             >
               <FaLinkedinIn />
             </a>
@@ -206,7 +207,7 @@ function Header() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:bg-green-500 border-2 border-black p-1 rounded-lg"
+              className="text-green-500 bg-white text-3xl border-2 border-black  rounded-lg"
             >
               <FaWhatsapp />
             </a>
