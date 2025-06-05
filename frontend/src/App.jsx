@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Header/Header';
 import Main from './Home/crousal/Main';
-import Footer from './Footer/Footer';
+
 import CCTV from './All services/CCTV';
 import DoorAutomation from './All services/DoorAutomation';
 import SmartAlarmSystem from './All services/SmartAlarmSystem';
@@ -29,7 +29,7 @@ function App() {
               <Route path='/ourstory' element={<OurStory />} />
                <Route path='/contact' element={<Contactus />} />
       </Routes>
-      <Footer/>
+      
     </Router>
   );
 }
