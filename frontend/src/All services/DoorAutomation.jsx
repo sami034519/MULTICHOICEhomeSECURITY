@@ -15,7 +15,7 @@ import door4 from "../images/door5.JPG";
 import doormobile from "../images/doormobile.png";
 import doorimage from "../images/doorautoimage.jpg";
 import homestructure from "../images/homestructuref.JPG";
-import Contact from "../ORDER/Orderform";
+
 function DoorAutomation() {
     const doorFeatures = [
   {
@@ -255,7 +255,7 @@ function DoorAutomation() {
       </section>
       
     <img src={homestructure} alt="" data-aos="zoom-in-up"/>
-    <Contact/>
+   
     </>
   );
 }

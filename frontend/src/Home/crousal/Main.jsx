@@ -19,7 +19,7 @@ import homestructure from "../../images/homestructuref.JPG"
 import Clients from "../Clients/Clients";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Contact from "../../ORDER/Orderform";
+
 
 const HeroCarousel = () => {
   useEffect(() => {
@@ -68,7 +68,7 @@ const HeroCarousel = () => {
     <img className="lg:h-[70vh] w-screen" src={homestructure} alt="" data-aos="zoom-in-up" />
     <CompanyStats/>
     <Clients/>
-    <Contact/>
+    
     </>
   );
 };

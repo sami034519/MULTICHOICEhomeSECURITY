@@ -9,7 +9,6 @@ import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Contact from "../ORDER/Orderform";
 import homestructure from "../images/homestructuref.JPG";
 
 function Solarenergy() {
@@ -308,7 +307,6 @@ function Solarenergy() {
           data-aos="zoom-in-down"
         />
       </section>
-      <Contact />
     </>
   );
 }

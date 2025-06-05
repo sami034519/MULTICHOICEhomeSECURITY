@@ -1,6 +1,6 @@
 import React from 'react'
 import contact from "../images/contactnow.jpg"
-import Contact from '../ORDER/Orderform'
+
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaFacebookF, FaInstagram } from "react-icons/fa";
 function Contactus() {
   return (
@@ -93,7 +93,7 @@ function Contactus() {
         </div>
       </div>
     </section>
-          <Contact/>            
+                     
           </>
   )
 }

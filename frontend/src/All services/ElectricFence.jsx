@@ -7,7 +7,6 @@ import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Contact from "../ORDER/Orderform";
 import homestructure from "../images/homestructuref.JPG";
 
 function ElectricFence() {
@@ -194,10 +193,17 @@ function ElectricFence() {
         {/* image intro  */}
         <div className="flex justify-center lg:flex-row flex-col lg:gap-x-16 items-center lg:py-20">
           <div className="p-2">
-            <img className="lg:max-w-xl max-w-xs" src={fence1} alt="" data-aos="zoom-in-down" />
+            <img
+              className="lg:max-w-xl max-w-xs"
+              src={fence1}
+              alt=""
+              data-aos="zoom-in-down"
+            />
           </div>
           <div className="lg:max-w-[40%] max-w-[90%] overflow-hidden">
-            <h1 className="text-4xl font-bold pb-5" data-aos="fade-right">OUR HOME FENCE SERVICE</h1>
+            <h1 className="text-4xl font-bold pb-5" data-aos="fade-right">
+              OUR HOME FENCE SERVICE
+            </h1>
             <p className="text-gray-500 py-4" data-aos="fade-left">
               At MultiChoice, our Home Fence Service is designed to provide
               reliable, intelligent, and modern perimeter protection for your
@@ -227,7 +233,7 @@ function ElectricFence() {
           data-aos="zoom-in-down"
         />
       </section>
-      <Contact />
+    
     </>
   );
 }

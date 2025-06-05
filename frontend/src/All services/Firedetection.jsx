@@ -9,7 +9,6 @@ import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Contact from "../ORDER/Orderform";
 import homestructure from "../images/homestructuref.JPG";
 
 function Firedetection() {
@@ -300,7 +299,7 @@ function Firedetection() {
           data-aos="zoom-in-down"
         />
       </section>
-      <Contact />
+      
     </>
   );
 }

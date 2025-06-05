@@ -12,6 +12,7 @@ import Firedetection from './All services/Firedetection';
 import WhyChooseMultiChoice from './WHYchooseus/Whychoose';
 import OurStory from './Ourstory/Ourstory';
 import Contactus from './Contactus/Contactus';
+
 function App() {
   return (
     <Router>

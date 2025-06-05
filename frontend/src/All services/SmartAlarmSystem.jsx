@@ -3,7 +3,6 @@ import { FaBell, FaMobileAlt, FaShieldAlt } from "react-icons/fa";
 import crousal1 from "../images/alarmsystemservice.jpg";
 import mobilecrousal1 from "../images/alarmsystemservice.jpg";
 
-
 import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -15,7 +14,7 @@ import alarm5 from "../images/alarm5.JPG";
 import alarm6 from "../images/alarm6.JPG";
 import alarm7 from "../images/alarm7.JPG";
 import alarm8 from "../images/alarm8.JPG";
-import Contact from "../ORDER/Orderform";
+
 import homestructure from "../images/homestructuref.JPG";
 
 function SmartAlarmSystem() {
@@ -206,7 +205,7 @@ function SmartAlarmSystem() {
             ))}
           </div>
         </section>
-      
+
         {/* benifits  */}
         <div className="flex justify-center items-center lg:py-10 pt-4 lg:pt-20 w-full">
           <h1
@@ -270,7 +269,6 @@ function SmartAlarmSystem() {
           data-aos="zoom-in-down"
         />
       </section>
-      <Contact />
     </>
   );
 }
