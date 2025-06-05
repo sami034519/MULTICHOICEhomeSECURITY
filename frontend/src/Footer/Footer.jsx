@@ -71,14 +71,27 @@ function Footer() {
   };
   const [isLoading, setIsLoading] = useState(false);
    const phoneNumber = "923330685543"; // international format
-  const message = ` PLEASE SEND ON WHATSAPP ALSO FOR IMMEDIATE RESPONSE ${formData}`;
-  const encodedMessage = encodeURIComponent(message);
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-  const handleClick = () => {
-    setTimeout(() => {
-      window.open(whatsappUrl, "_blank");
-    }, 10000); // 30000 milliseconds = 30 seconds
-  };
+
+// Convert formData to readable string
+const formattedFormData = Object.entries(formData)
+  .map(([key, value]) => `${key}: ${value}`)
+  .join('\n');
+
+const message = `PLEASE SEND ON WHATSAPP ALSO FOR IMMEDIATE RESPONSE\n\n${formattedFormData}`;
+const encodedMessage = encodeURIComponent(message);
+const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+const handleClick = () => {
+  setTimeout(() => {
+    window.open(whatsappUrl, "_blank");
+  }, 2000); // 10 seconds
+};
+const handle2Submit = (e) => {
+  e.preventDefault();
+
+  handleSubmit(e) ;     // First function
+  handleClick();   // Second function (can have delay)
+};
 
   return (
     <>
@@ -90,7 +103,8 @@ function Footer() {
           FEEL FREE FOR BOOKING
         </h3>
         <form
-          onSubmit={handleSubmit}
+          onSubmit={handle2Submit}
+          
           className="max-w-2xl mx-auto space-y-4"
           data-aos="zoom-in-down"
         >
@@ -152,7 +166,7 @@ function Footer() {
           />
           <button
             type="submit"
-            onClick={handleClick}
+            
             className="btn bg-black text-yellow-400 text-lg w-full font-semibold px-6 py-2 rounded hover:bg-green-800"
           >
             SUBMIT
