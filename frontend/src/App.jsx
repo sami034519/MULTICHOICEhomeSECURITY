@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Header/Header';
 import Main from './Home/crousal/Main';
-
+import Footer from './Footer/Footer';
 import CCTV from './All services/CCTV';
 import DoorAutomation from './All services/DoorAutomation';
 import SmartAlarmSystem from './All services/SmartAlarmSystem';
@@ -12,6 +12,7 @@ import Firedetection from './All services/Firedetection';
 import WhyChooseMultiChoice from './WHYchooseus/Whychoose';
 import OurStory from './Ourstory/Ourstory';
 import Contactus from './Contactus/Contactus';
+import CCTV2 from './CCTV2';
 
 function App() {
   return (
@@ -26,10 +27,10 @@ function App() {
              <Route path='/services/solar-energy' element={<Solarenergy />} />
              <Route path='/services/fire-detection-system' element={<Firedetection />} />
               <Route path='/multichoice' element={<WhyChooseMultiChoice />} />
-              <Route path='/ourstory' element={<OurStory />} />
+              <Route path='/ourstory' element={<CCTV2/>} />
                <Route path='/contact' element={<Contactus />} />
       </Routes>
-      
+      <Footer/>
     </Router>
   );
 }
