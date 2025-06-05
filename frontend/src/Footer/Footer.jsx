@@ -16,20 +16,21 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function Footer() {
+ 
   useEffect(() => {
-      AOS.init({
-        duration: 700,
-        once: false,
-        mirror: true,
-      });
-    }, []);
+    AOS.init({
+      duration: 700,
+      once: false,
+      mirror: true,
+    });
+  }, []);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
     service: "",
-    adress  :'',         // <-- added
+    adress: "", // <-- added
   });
   const [status, setStatus] = useState("");
 
@@ -42,39 +43,57 @@ function Footer() {
   };
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
-  setIsLoading(true);
-  setStatus("");
+    e.preventDefault();
+    setIsLoading(true);
+    setStatus("");
 
-  try {
-    const res = await axios.post("https://mutichoicemailer.vercel.app/api/order", formData);
-    setStatus(res.data.message || "Message sent successfully!");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-      service: "", // Reset service too
-    });
-  } catch (error) {
-    const errorMessage =
-      error.response?.data?.error || "Something went wrong. Please try again.";
-    setStatus(errorMessage);
-  } finally {
-    setIsLoading(false);
-  }
-};
-const [isLoading, setIsLoading] = useState(false);
-
+    try {
+      const res = await axios.post(
+        "https://mutichoicemailer.vercel.app/api/order",
+        formData
+      );
+      setStatus(res.data.message || "Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+        service: "", // Reset service too
+      });
+    } catch (error) {
+      const errorMessage =
+        error.response?.data?.error ||
+        "Something went wrong. Please try again.";
+      setStatus(errorMessage);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  const [isLoading, setIsLoading] = useState(false);
+   const phoneNumber = "923330685543"; // international format
+  const message = ` PLEASE SEND ON WHATSAPP ALSO FOR IMMEDIATE RESPONSE ${formData}`;
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  const handleClick = () => {
+    setTimeout(() => {
+      window.open(whatsappUrl, "_blank");
+    }, 10000); // 30000 milliseconds = 30 seconds
+  };
 
   return (
     <>
-         
-      <div className="bg-yellow-500 py-10 px-6 text-black overflow-hidden"  >
-        <h3 className="text-4xl font-bold mb-6 text-center" data-aos="fade-left">
+      <div className="bg-yellow-500 py-10 px-6 text-black overflow-hidden">
+        <h3
+          className="text-4xl font-bold mb-6 text-center"
+          data-aos="fade-left"
+        >
           FEEL FREE FOR BOOKING
         </h3>
-        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-4" data-aos="zoom-in-down">
+        <form
+          onSubmit={handleSubmit}
+          className="max-w-2xl mx-auto space-y-4"
+          data-aos="zoom-in-down"
+        >
           <input
             name="name"
             value={formData.name}
@@ -133,18 +152,22 @@ const [isLoading, setIsLoading] = useState(false);
           />
           <button
             type="submit"
+            onClick={handleClick}
             className="btn bg-black text-yellow-400 text-lg w-full font-semibold px-6 py-2 rounded hover:bg-green-800"
           >
             SUBMIT
           </button>
           {isLoading ? (
-  <div className="flex justify-center mt-4 ">
-    <div className="w-6 h-6 border-4 border-t-transparent border-black rounded-full animate-spin"></div>
-  </div>
-) : status && (
-  <p className="text-center text-lg mt-4 bg-white text-black font-medium">{status}</p>
-)}
-
+            <div className="flex justify-center mt-4 ">
+              <div className="w-6 h-6 border-4 border-t-transparent border-black rounded-full animate-spin"></div>
+            </div>
+          ) : (
+            status && (
+              <p className="text-center text-lg mt-4 bg-white text-black font-medium">
+                {status}
+              </p>
+            )
+          )}
         </form>
       </div>
       {/* footer  */}
