@@ -47,7 +47,7 @@ function Footer() {
   setStatus("");
 
   try {
-    const res = await axios.post("/api/order", formData);
+    const res = await axios.post("https://mutichoicemailer.vercel.app/api/order", formData);
     setStatus(res.data.message || "Message sent successfully!");
     setFormData({
       name: "",
