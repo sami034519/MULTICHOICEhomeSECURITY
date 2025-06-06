@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaVideo, FaMobileAlt, FaUserShield } from "react-icons/fa";
-import crousal1 from "./images/cctv.jpg";
+import crousal1 from "./images/HOMECCTV.jpg";
 import mobilecrousal1 from "./images/cctvservice.jpg";
 import cctvservice2 from "./images/cctvservice2.jpg";
 import cctvservice3 from "./images/cctvservice3final.png";
@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
 
 import homestructure from "./images/homestructuref.JPG";
 
-function CCTV2() {
+function CCTV() {
   const cards = [
     {
       icon: <FaVideo size={40} className="text-yellow-500 mx-auto mb-4" />,
@@ -281,4 +281,4 @@ function CCTV2() {
   );
 }
 
-export default CCTV2;
+export default CCTV;

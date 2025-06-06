@@ -1,37 +1,37 @@
 import React, { useEffect, useState } from "react";
-import { FaFireExtinguisher, FaBell, FaShieldAlt } from "react-icons/fa";
-import crousal1 from "../images/fire_alarm_guide.jpg";
-import mobilecrousal1 from "../images/fire_alarm_guide.jpg";
-import fence1 from "../images/firedetect.jpg";
-import solarsystem from "../images/firedetect2.jpg";
-import solarecofriend from "../images/mobilecrousal7.png";
+import { FiSun, FiBatteryCharging, FiSmartphone } from "react-icons/fi";
+import crousal1 from "./images/solar energy.png";
+import mobilecrousal1 from "./images/solar energy.png";
+import fence1 from "./images/solarsystem.webp";
+import solarsystem from "./images/SOLARSYSTEM2.JPG";
+import solarecofriend from "./images/solarecofriendlyf-removebg-preview.png";
 import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import homestructure from "../images/homestructuref.JPG";
+import homestructure from "./images/homestructuref.JPG";
 
-function Firedetection() {
-  const fireIcons = [
-    <FaBell className="text-4xl text-yellow-400 mb-4" />,
-    <FaFireExtinguisher className="text-4xl text-yellow-400 mb-4" />,
-    <FaShieldAlt className="text-4xl text-yellow-400 mb-4" />,
-  ];
-  const fireCards = [
+function Solarpanel() {
+  const cards = [
     {
-      title: "Instant Fire Alerts",
+      icon: <FiSun className="text-yellow-400 text-5xl mx-auto mb-4" />,
+      title: "High-Efficiency Panels",
       description:
-        "Receive immediate alerts in case of smoke, fire, or heat spikes through connected devices.",
+        "Capture more sunlight with advanced solar panels designed for maximum energy output and durability.",
     },
     {
-      title: "Smart Smoke Detection",
+      icon: (
+        <FiBatteryCharging className="text-yellow-400 text-5xl mx-auto mb-4" />
+      ),
+      title: "Smart Energy Storage",
       description:
-        "Equipped with advanced sensors to detect smoke and heat with high accuracy and speed.",
+        "Store excess solar power for nighttime use or cloudy days with intelligent battery backup solutions.",
     },
     {
-      title: "24/7 Emergency Monitoring",
+      icon: <FiSmartphone className="text-yellow-400 text-5xl mx-auto mb-4" />,
+      title: "Mobile Monitoring",
       description:
-        "Continuous monitoring with automated emergency response integration and real-time reporting.",
+        "Track your solar system's performance in real-time from anywhere using our smart mobile app.",
     },
   ];
   useEffect(() => {
@@ -79,7 +79,7 @@ function Firedetection() {
                 : ""
             }`}
           >
-            EARLY WARNING
+            HIGH POWER
           </h1>
           <h1
             className={`lg:text-[60px] text-xl font-extrabold lg:mb-1 lg:mt-16 text-yellow-300 ${
@@ -88,7 +88,7 @@ function Firedetection() {
                 : ""
             }`}
           >
-            FIRE DETECTION
+            HOME SOLAR
           </h1>
           <h1
             className={`lg:text-[60px] text-xl font-extrabold mb-2 lg:mb-10 lg:mt-6 text-yellow-300 ${
@@ -106,9 +106,8 @@ function Firedetection() {
                 : ""
             }`}
           >
-            Protecting What Matters Most — Your Home, Your Safety. Fast,
-            intelligent, and responsive. Smart Fire Detection Solutions to
-            Prevent Disasters Before They Start.
+            Protecting What Matters Most — Your Home, Your Peace. Reliable, and
+            scalable
             <span className="lg:block hidden">
               {" "}
               Smart Security Solutions for Safer Homes.
@@ -127,7 +126,7 @@ function Firedetection() {
         />
 
         <div
-          className={`absolute w-screen top-0 left-0 h-[50vh] bg-black bg-opacity-20 transition-all duration-1000 ${
+          className={`absolute w-screen top-0 left-0 h-[50vh] bg-black bg-opacity-10 transition-all duration-1000 ${
             animate ? "animate__animated animate__backInLeft w-1/2" : "w-0"
           }`}
         ></div>
@@ -146,8 +145,8 @@ function Firedetection() {
                 : ""
             }`}
           >
-            FIRE DETECTION
-            <br /> SYSTEMS
+            HOME
+            <br /> SOLAR SYSTEMS
           </p>
         </div>
       </div>
@@ -158,7 +157,7 @@ function Firedetection() {
             className="lg:text-5xl text-gray-700 text-3xl font-bold border-b-4 border-yellow-500"
             data-aos="zoom-in-down"
           >
-            FIRE DETECTION
+            SOLAR SYSTEMS
           </h1>
         </div>
 
@@ -167,30 +166,27 @@ function Firedetection() {
             className="text-gray-500 lg:max-w-[50%] max-w-[95%] text-center pt-5"
             data-aos="fade-left"
           >
-            <p className="text-gray-500 py-4" data-aos="fade-left">
-              Our advanced Fire Detection Systems provide rapid and reliable
-              protection for homes and businesses. Equipped with
-              high-sensitivity smoke and heat sensors, intelligent alarm
-              technology, and real-time monitoring, our systems are designed to
-              detect fire hazards early and prevent disaster. Whether you need
-              protection for residential, commercial, or industrial spaces,
-              MultiChoice offers seamless integration with your existing
-              security setup, mobile alerts, and 24/7 monitoring to ensure your
-              safety and peace of mind.
-            </p>
+            Our advanced Solar Energy Systems provide a sustainable and
+            cost-effective power solution for your home or business. Designed
+            with high-efficiency solar panels, intelligent inverters, and
+            real-time monitoring, our systems ensure maximum energy output and
+            long-term reliability. Whether you aim to reduce electricity bills,
+            become energy-independent, or support a greener planet, MultiChoice
+            delivers seamless solar integration with smart mobile connectivity,
+            ensuring 24/7 performance tracking and complete peace of mind.
           </p>
         </div>
 
         {/* card  */}
         <section className="py-16 px-4 lg:px-24 bg-white">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {fireCards.map((card, index) => (
+            {cards.map((card, index) => (
               <div
                 key={index}
                 className="bg-slate-800 rounded-xl p-4 text-center shadow-md hover:shadow-lg transition duration-300"
                 data-aos="zoom-in-down"
               >
-                {fireIcons[index]}
+                {card.icon}
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {card.title}
                 </h3>
@@ -212,21 +208,26 @@ function Firedetection() {
           </div>
           <div className="lg:max-w-[40%] max-w-[90%] overflow-hidden">
             <h1 className="text-4xl font-bold pb-5" data-aos="fade-right">
-              OUR FIRE DETECTION SYSTEMS
+              OUR HOME SOLAR SYSTEMS
             </h1>
             <p className="text-gray-500 py-4" data-aos="fade-left">
-              At MultiChoice, our Fire Detection Systems are designed to provide
-              early warning and rapid response in the event of fire-related
-              emergencies. Using intelligent sensors, our systems can detect
-              smoke, heat, and gas leaks with high precision—helping to protect
-              lives and property before threats escalate.
+              At MultiChoice, our Solar System solutions are built to empower
+              your home or business with clean, renewable energy. Whether you
+              want to reduce electricity bills, minimize your carbon footprint,
+              or achieve energy independence, our high-efficiency solar panels
+              and smart inverters deliver dependable performance. With seamless
+              integration, real-time monitoring, and expert installation, we
+              bring you a sustainable power solution you can trust—day after
+              day, year after year.
             </p>
             <p className="text-gray-500" data-aos="fade-left">
-              Integrated with mobile connectivity and 24/7 monitoring, our fire
-              detection solutions alert you instantly via smartphone and can
-              trigger automatic alarms or notify emergency services. From
-              residential spaces to commercial buildings, we deliver dependable
-              fire safety technology for complete peace of mind.
+              We go beyond traditional fencing by integrating high-voltage
+              electric fence systems with smart sensors and real-time
+              monitoring. Our solutions are equipped with tamper detection,
+              intrusion alerts, and can be linked to your mobile device,
+              allowing you to stay informed and in control from anywhere. In
+              case of any breach or tampering, our system triggers instant
+              alarms to alert you and security personnel.
             </p>
           </div>
         </div>
@@ -234,24 +235,26 @@ function Firedetection() {
         <div className="flex justify-center lg:flex-row flex-col-reverse lg:gap-x-16 items-center lg:py-20">
           <div className="lg:max-w-[40%] max-w-[90%] overflow-hidden">
             <h1 className="text-4xl font-bold pb-5" data-aos="fade-right">
-              PROTECT TODAY, SECURE TOMORROW.
+              SAVE TODAY SHINE TOMORROW.
             </h1>
             <p className="text-gray-500 py-4" data-aos="fade-left">
-              At MultiChoice, our Fire Detection Systems are designed not just
-              for safety—but for peace of mind. Early detection of smoke, heat,
-              or fire hazards helps you prevent damage, protect your loved ones,
-              and avoid costly losses. Our advanced sensors and intelligent
-              alarms provide rapid, reliable alerts when it matters most.
+              At MultiChoice, our Solar System solutions are designed not just
+              for sustainability—but for savings. By harnessing the power of the
+              sun, you can significantly reduce your monthly electricity bills
+              and protect yourself from rising energy costs. Our high-efficiency
+              solar panels and smart inverters ensure you get maximum energy
+              output with minimum overhead, turning sunlight into real financial
+              benefits.
             </p>
             <p className="text-gray-500" data-aos="fade-left">
-              With professional installation, seamless integration with your
-              security network, and real-time mobile notifications, MultiChoice
-              fire detection solutions offer dependable protection for homes and
-              businesses alike. Trust us to help you stay safe and secure—today
-              and every day.
+              With expert installation, real-time system monitoring, and
+              long-term reliability, MultiChoice solar solutions are a smart
+              investment for both homes and businesses. From reducing your
+              carbon footprint to reclaiming control over your energy expenses,
+              our systems provide a cleaner, cheaper, and more independent way
+              to power your life—today and for years to come.
             </p>
           </div>
-
           <div className="p-2">
             <img
               className="lg:max-w-xl max-w-xs"
@@ -272,20 +275,25 @@ function Firedetection() {
           </div>
           <div className="lg:max-w-[45%] max-w-[90%] overflow-hidden">
             <h1 className="text-3xl font-bold pb-5" data-aos="fade-right">
-              ADVANCED FIRE DETECTION SYSTEMS
+              MAKE YOUR WORLD ECO-FRIENDLY
             </h1>
             <p className="text-gray-500 py-4" data-aos="fade-left">
-              At MultiChoice, our Fire Detection System services provide
-              reliable and early warning solutions to protect your home or
-              business from fire hazards. Using state-of-the-art smoke and heat
-              sensors, our systems detect fire risks quickly and accurately,
-              triggering immediate alerts to ensure safety and minimize damage.
+              At MultiChoice, we believe in powering homes and businesses with
+              clean, renewable energy while making our world more eco-friendly.
+              Everyone is aware of our changing climate—whether it’s a natural
+              phase or influenced by human activity. The fact remains: we all
+              have a responsibility to act. By choosing solar energy, you're
+              choosing a sustainable path that reduces your carbon footprint and
+              helps preserve the planet for future generations.
             </p>
             <p className="text-gray-500" data-aos="fade-left">
-              With real-time monitoring, smart integration, and mobile
-              connectivity, you can stay informed and in control 24/7. Our
-              expert installation and maintenance guarantee a seamless,
-              dependable fire protection system tailored to your specific needs.
+              Our high-efficiency solar panels and smart inverters are designed
+              to help you lower electricity bills while contributing to a
+              cleaner environment. With expert installation, seamless
+              integration, and real-time monitoring, MultiChoice solar solutions
+              provide reliable, long-term performance. It's time to take
+              action—make the switch to solar and join us in creating a greener,
+              smarter, and more energy-independent future.
             </p>
           </div>
         </div>
@@ -299,9 +307,8 @@ function Firedetection() {
           data-aos="zoom-in-down"
         />
       </section>
-      
     </>
   );
 }
 
-export default Firedetection;
+export default Solarpanel;

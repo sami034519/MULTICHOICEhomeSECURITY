@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { FaBell, FaMobileAlt, FaShieldAlt } from "react-icons/fa";
-import crousal1 from "../images/alarmsystemservice.jpg";
-import mobilecrousal1 from "../images/alarmsystemservice.jpg";
+import crousal1 from "./images/alarmsystemservice.jpg";
+import mobilecrousal1 from "./images/alarmsystemservice.jpg";
 
 import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import alarm1 from "../images/ararm1.JPG";
-import alarm2 from "../images/alarm2.JPG";
-import alarm3 from "../images/alarm3.JPG";
-import alarm4 from "../images/alarm4.JPG";
-import alarm5 from "../images/alarm5.JPG";
-import alarm6 from "../images/alarm6.JPG";
-import alarm7 from "../images/alarm7.JPG";
-import alarm8 from "../images/alarm8.JPG";
+import alarm1 from "./images/ararm1.JPG";
+import alarm2 from "./images/alarm2.JPG";
+import alarm3 from "./images/alarm3.JPG";
+import alarm4 from "./images/alarm4.JPG";
+import alarm5 from "./images/alarm5.JPG";
+import alarm6 from "./images/alarm6.JPG";
+import alarm7 from "./images/alarm7.JPG";
+import alarm8 from "./images/alarm8.JPG";
 
-import homestructure from "../images/homestructuref.JPG";
+import homestructure from "./images/homestructuref.JPG";
 
-function SmartAlarmSystem() {
+function Smartalarm() {
   const benifits = [
     { img: alarm1 },
     { img: alarm2 },
@@ -273,4 +273,4 @@ function SmartAlarmSystem() {
   );
 }
 
-export default SmartAlarmSystem;
+export default Smartalarm;

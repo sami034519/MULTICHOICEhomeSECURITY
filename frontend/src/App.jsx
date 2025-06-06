@@ -3,16 +3,17 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Header/Header';
 import Main from './Home/crousal/Main';
 import Footer from './Footer/Footer';
-import CCTV from './All services/CCTV';
-import DoorAutomation from './All services/DoorAutomation';
-import SmartAlarmSystem from './All services/SmartAlarmSystem';
-import ElectricFence from './All services/ElectricFence';
-import Solarenergy from './All services/Solarenergy';
-import Firedetection from './All services/Firedetection';
+
+import Electricfence from './Electricfence';
+import Smartalarm from './Smartalarm';
+import Firedetection1 from './Firedetection1';
+import Solarpanel from './Solarpanel';
+
 import WhyChooseMultiChoice from './WHYchooseus/Whychoose';
 import OurStory from './Ourstory/Ourstory';
+import Doorautomation from './Doorautomation';
 import Contactus from './Contactus/Contactus';
-import CCTV2 from './CCTV2';
+import CCTV from './CCTV2';
 
 function App() {
   return (
@@ -20,14 +21,14 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Main />} />
-         <Route path='/services/smart-alarm-system' element={<SmartAlarmSystem />} />
-          <Route path='/services/smart-Door-automation' element={<DoorAutomation />} />
+         <Route path='/services/smart-alarm-system' element={<Smartalarm />} />
+          <Route path='/services/smart-Door-automation' element={<Doorautomation />} />
            <Route path='/services/cctv-surveillance' element={<CCTV />} />
-            <Route path='/services/electric-fence' element={<ElectricFence />} />
-             <Route path='/services/solar-energy' element={<Solarenergy />} />
-             <Route path='/services/fire-detection-system' element={<Firedetection />} />
+            <Route path='/services/electric-fence' element={<Electricfence />} />
+             <Route path='/services/solar-energy' element={<Solarpanel />} />
+             <Route path='/services/fire-detection-system' element={<Firedetection1 />} />
               <Route path='/multichoice' element={<WhyChooseMultiChoice />} />
-              <Route path='/ourstory' element={<CCTV2/>} />
+              <Route path='/ourstory' element={<OurStory/>} />
                <Route path='/contact' element={<Contactus />} />
       </Routes>
       <Footer/>

@@ -2,21 +2,21 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import "animate.css";
-import crousal1 from "../images/door.jpeg";
-import mobilecrousal1 from "../images/door.jpeg";
+import crousal1 from "./images/door.jpeg";
+import mobilecrousal1 from "./images/door.jpeg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaBluetoothB, FaUserShield, FaBell, FaMobileAlt, FaUsers } from "react-icons/fa";
-import door1 from "../images/door1.JPG";
-import door2 from "../images/door2.JPG";
-import door3 from "../images/door3.JPG";
-import door5 from "../images/door4.JPG";
-import door4 from "../images/door5.JPG";
-import doormobile from "../images/doormobile.png";
-import doorimage from "../images/doorautoimage.jpg";
-import homestructure from "../images/homestructuref.JPG";
+import door1 from "./images/door1.JPG";
+import door2 from "./images/door2.JPG";
+import door3 from "./images/door3.JPG";
+import door5 from "./images/door4.JPG";
+import door4 from "./images/door5.JPG";
+import doormobile from "./images/doormobile.png";
+import doorimage from "./images/doorautoimage.jpg";
+import homestructure from "./images/homestructuref.JPG";
 
-function DoorAutomation() {
+function Doorautomation() {
     const doorFeatures = [
   {
     icon: <FaBluetoothB size={40} className="text-yellow-500 mx-auto mb-4" />,
@@ -260,4 +260,4 @@ function DoorAutomation() {
   );
 }
 
-export default DoorAutomation;
+export default Doorautomation;

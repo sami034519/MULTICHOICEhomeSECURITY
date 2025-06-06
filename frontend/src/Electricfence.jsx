@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { FaBolt, FaShieldAlt, FaMobileAlt } from "react-icons/fa";
-import crousal1 from "../images/electricfenceservice.jpg";
-import mobilecrousal1 from "../images/electricfenceservice.jpg";
-import fence1 from "../images/fencesystem (2).jpeg";
+import crousal1 from "./images/electricfenceservice.jpg";
+import mobilecrousal1 from "./images/electricfenceservice.jpg";
+import fence1 from "./images/fencesystem (2).jpeg";
 import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import homestructure from "../images/homestructuref.JPG";
+import homestructure from "./images/homestructuref.JPG";
 
-function ElectricFence() {
+function Electricfence() {
   const cards = [
     {
       icon: <FaBolt size={40} className="text-yellow-500 mx-auto mb-4" />,
@@ -238,4 +238,4 @@ function ElectricFence() {
   );
 }
 
-export default ElectricFence;
+export default Electricfence;
