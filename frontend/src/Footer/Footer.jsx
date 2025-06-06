@@ -82,9 +82,9 @@ const encodedMessage = encodeURIComponent(message);
 const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
 const handleClick = () => {
-  
+  setTimeout(() => {
     window.open(whatsappUrl, "_blank");
-  
+  }, 100); // 10 seconds
 };
 const handle2Submit = (e) => {
   e.preventDefault();
