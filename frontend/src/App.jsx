@@ -21,14 +21,14 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Main />} />
-         <Route path='/services/smart-alarm-system' element={<Smartalarm />} />
-          <Route path='/services/smart-Door-automation' element={<Doorautomation />} />
+         <Route path='/smart-alarm-system' element={<Smartalarm />} />
+          <Route path='/smart-Door-automation' element={<Doorautomation />} />
            <Route path='/cctv-surveillance' element={<CCTV />} />
             <Route path='/electric-fence' element={<Electricfence />} />
              <Route path='/solar-energy' element={<Solarpanel />} />
              <Route path='/fire-detection-system' element={<Firedetection1 />} />
               <Route path='/multichoice' element={<WhyChooseMultiChoice />} />
-              <Route path='/ourstory' element={<Solarpanel/>} />
+              <Route path='/ourstory' element={<OurStory/>} />
                <Route path='/contact' element={<Contactus />} />
       </Routes>
       <Footer/>
