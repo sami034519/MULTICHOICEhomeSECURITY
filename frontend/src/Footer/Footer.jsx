@@ -1,8 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/securitylogosinglef.png";
-import { useState } from "react";
-import { useEffect } from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -16,7 +14,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function Footer() {
- 
   useEffect(() => {
     AOS.init({
       duration: 700,
@@ -24,15 +21,20 @@ function Footer() {
       mirror: true,
     });
   }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
     service: "",
-    adress: "", // <-- added
+    adress: "",
   });
+
   const [status, setStatus] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const phoneNumber = "923330685543";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -58,8 +60,22 @@ function Footer() {
         email: "",
         phone: "",
         message: "",
-        service: "", // Reset service too
+        service: "",
+        adress: "",
       });
+
+      // Send WhatsApp message after success
+      const formattedMessage = Object.entries(formData)
+        .map(([key, value]) => `${key}: ${value}`)
+        .join("\n");
+
+      const message = `PLEASE SEND ON WHATSAPP ALSO FOR IMMEDIATE RESPONSE\n\n${formattedMessage}`;
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+      setTimeout(() => {
+        window.open(whatsappUrl, "_blank");
+      }, 2000); // open after 2 seconds
     } catch (error) {
       const errorMessage =
         error.response?.data?.error ||
@@ -69,42 +85,15 @@ function Footer() {
       setIsLoading(false);
     }
   };
-  const [isLoading, setIsLoading] = useState(false);
-   const phoneNumber = "923330685543"; // international format
-
-// Convert formData to readable string
-const formattedFormData = Object.entries(formData)
-  .map(([key, value]) => `${key}: ${value}`)
-  .join('\n');
-
-const message = `PLEASE SEND ON WHATSAPP ALSO FOR IMMEDIATE RESPONSE\n\n${formattedFormData}`;
-const encodedMessage = encodeURIComponent(message);
-const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-const handleClick = () => {
-  setTimeout(() => {
-    window.open(whatsappUrl, "_blank");
-  }, 3000); // 10 seconds
-};
-const handle2Submit = (e) => {
-  e.preventDefault();
-
-  handleSubmit(e) ;     // First function
-    // Second function (can have delay)
-};
 
   return (
     <>
       <div className="bg-yellow-500 py-10 px-6 text-black overflow-hidden">
-        <h3
-          className="text-4xl font-bold mb-6 text-center"
-          data-aos="fade-left"
-        >
+        <h3 className="text-4xl font-bold mb-6 text-center" data-aos="fade-left">
           FEEL FREE FOR BOOKING
         </h3>
         <form
-          onSubmit={handle2Submit}
-          
+          onSubmit={handleSubmit}
           className="max-w-2xl mx-auto space-y-4"
           data-aos="zoom-in-down"
         >
@@ -138,7 +127,7 @@ const handle2Submit = (e) => {
             value={formData.adress}
             onChange={handleChange}
             required
-            placeholder="Adress"
+            placeholder="Address"
             className="w-full p-2 border rounded"
           />
           <select
@@ -166,13 +155,12 @@ const handle2Submit = (e) => {
           />
           <button
             type="submit"
-            onClick={handleClick}
             className="btn bg-black text-yellow-400 text-lg w-full font-semibold px-6 py-2 rounded hover:bg-green-800"
           >
             SUBMIT
           </button>
           {isLoading ? (
-            <div className="flex justify-center mt-4 ">
+            <div className="flex justify-center mt-4">
               <div className="w-6 h-6 border-4 border-t-transparent border-black rounded-full animate-spin"></div>
             </div>
           ) : (
@@ -184,24 +172,21 @@ const handle2Submit = (e) => {
           )}
         </form>
       </div>
-      {/* footer  */}
+
+      {/* Footer */}
       <div className="relative bg-black text-white w-full px-4 py-10">
-        {/* Main Footer Content */}
         <div className="flex flex-col lg:flex-row justify-between items-center gap-10 max-w-screen-xl mx-auto pb-10">
-          {/* Left Links */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 font-medium">
-            <Link to="" className="hover:border-b-2 border-white transition">
+            <Link to="#" className="hover:border-b-2 border-white transition">
               ABOUT
             </Link>
-            <Link to="" className="hover:border-b-2 border-white transition">
+            <Link to="#" className="hover:border-b-2 border-white transition">
               PORTFOLIO
             </Link>
-            <Link to="" className="hover:border-b-2 border-white transition">
+            <Link to="#" className="hover:border-b-2 border-white transition">
               SERVICES
             </Link>
           </div>
-
-          {/* Center Logo and Address */}
           <div className="text-center max-w-md">
             <Link to="/">
               <img
@@ -214,25 +199,21 @@ const handle2Submit = (e) => {
             <p>© 2025 DEVMOTIVE. All Rights Reserved.</p>
             <p>123 Baker Street, London W1U 6RS, United Kingdom</p>
           </div>
-
-          {/* Right Links */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 font-medium">
-            <Link to="" className="hover:border-b-2 border-white transition">
+            <Link to="#" className="hover:border-b-2 border-white transition">
               TEAMS
             </Link>
-            <Link to="" className="hover:border-b-2 border-white transition">
+            <Link to="#" className="hover:border-b-2 border-white transition">
               CONTACT US
             </Link>
-            <Link to="" className="hover:border-b-2 border-white transition">
+            <Link to="#" className="hover:border-b-2 border-white transition">
               HOME
             </Link>
           </div>
         </div>
 
-        {/* Divider */}
         <div className="border-b border-white w-full max-w-screen-xl mx-auto mb-10"></div>
 
-        {/* Social Icons Grid */}
         <div className="flex justify-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-screen-md text-xl">
             {[
