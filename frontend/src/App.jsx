@@ -23,10 +23,10 @@ function App() {
         <Route path='/' element={<Main />} />
          <Route path='/services/smart-alarm-system' element={<Smartalarm />} />
           <Route path='/services/smart-Door-automation' element={<Doorautomation />} />
-           <Route path='/services/cctv-surveillance' element={<CCTV />} />
-            <Route path='/services/electric-fence' element={<Electricfence />} />
-             <Route path='/services/solar-energy' element={<Solarpanel />} />
-             <Route path='/services/fire-detection-system' element={<Firedetection1 />} />
+           <Route path='/cctv-surveillance' element={<CCTV />} />
+            <Route path='/electric-fence' element={<Electricfence />} />
+             <Route path='/solar-energy' element={<Solarpanel />} />
+             <Route path='/fire-detection-system' element={<Firedetection1 />} />
               <Route path='/multichoice' element={<WhyChooseMultiChoice />} />
               <Route path='/ourstory' element={<Solarpanel/>} />
                <Route path='/contact' element={<Contactus />} />

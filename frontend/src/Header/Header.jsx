@@ -93,33 +93,33 @@ function Header() {
   const servicesSubmenu = [
     {
       name: "Smart Alarm System",
-      path: "/services/smart-alarm-system",
+      path: "/smart-alarm-system",
       icon: <FaBell />,
     },
     {
       name: "Smart Door Automation",
-      path: "/services/smart-Door-automation",
+      path: "/smart-Door-automation",
       icon: <FaHome />,
     },
     {
       name: "CCTV Surveillance",
-      path: "/services/cctv-surveillance",
+      path: "/cctv-surveillance",
       icon: <FaVideo />,
     },
 
     {
       name: "Electric Fence",
-      path: "/services/electric-fence",
+      path: "/electric-fence",
       icon: <FaBolt />,
     },
     {
       name: "Solar Energy",
-      path: "/services/solar-energy",
+      path: "/solar-energy",
       icon: <FaSun />,
     },
     {
       name: "Fire Detection System",
-      path: "/services/fire-detection-system",
+      path: "/fire-detection-system",
       icon: <FaFire />,
     },
   ];
