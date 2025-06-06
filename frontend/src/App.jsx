@@ -28,7 +28,7 @@ function App() {
              <Route path='/services/solar-energy' element={<Solarpanel />} />
              <Route path='/services/fire-detection-system' element={<Firedetection1 />} />
               <Route path='/multichoice' element={<WhyChooseMultiChoice />} />
-              <Route path='/ourstory' element={<OurStory/>} />
+              <Route path='/ourstory' element={<Solarpanel/>} />
                <Route path='/contact' element={<Contactus />} />
       </Routes>
       <Footer/>
