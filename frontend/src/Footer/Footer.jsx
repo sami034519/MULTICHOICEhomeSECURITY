@@ -84,13 +84,13 @@ const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 const handleClick = () => {
   setTimeout(() => {
     window.open(whatsappUrl, "_blank");
-  }, 100); // 10 seconds
+  }, 800); // 10 seconds
 };
 const handle2Submit = (e) => {
   e.preventDefault();
 
   handleSubmit(e) ;     // First function
-  handleClick();   // Second function (can have delay)
+    // Second function (can have delay)
 };
 
   return (
@@ -166,7 +166,7 @@ const handle2Submit = (e) => {
           />
           <button
             type="submit"
-            
+            onClick={handleClick}
             className="btn bg-black text-yellow-400 text-lg w-full font-semibold px-6 py-2 rounded hover:bg-green-800"
           >
             SUBMIT
