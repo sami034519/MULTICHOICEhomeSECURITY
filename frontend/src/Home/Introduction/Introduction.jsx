@@ -6,6 +6,15 @@ import introimage from "../../images/introimage.jpg";
 import securitylogo from "../../images/mysecuritylogofinal.png";
 import homepic from "../../images/homepic1.jpg";
 function Introduction() {
+ const phoneNumber = "92333886978"; // ✅ Correct format (Pakistan number without +)
+const message = "Hello DevMotive! I Want To Know About Your Services..";
+const encodedMessage = encodeURIComponent(message);
+const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+const handleClick = () => {
+  window.open(whatsappUrl, "_blank");
+};
+
   useEffect(() => {
     AOS.init({
       duration: 1000, // animation duration in ms
@@ -61,7 +70,7 @@ function Introduction() {
                 className="bg-yellow-500 rounded pt-1 max-w-[162px]"
                 data-aos="flip-up"
               >
-                <button className="bg-black hover:bg-green-800 w-[162px] text-white rounded text-lg font-medium px-4 py-2">
+                <button onClick={handleClick} className="bg-black hover:bg-green-800 w-[162px] text-white rounded text-lg font-medium px-4 py-2">
                   CONTACT NOW
                 </button>
               </div>

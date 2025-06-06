@@ -1,8 +1,16 @@
 import React from 'react'
 import contact from "../images/contactnow.jpg"
-
+import AOS from "aos";
+import "aos/dist/aos.css"; 
+import { useEffect } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaFacebookF, FaInstagram } from "react-icons/fa";
 function Contactus() {
+  useEffect(() => {
+          AOS.init({
+            duration: 1000, // animation duration in ms
+            once: false, // whether animation should happen only once - while scrolling down
+          });
+        }, []);
   return (
     <>
     
@@ -26,9 +34,9 @@ function Contactus() {
           </div>
 
            <section className="bg-black mt-20 text-white py-16 px-6">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-yellow-500 mb-6">Contact Us</h2>
-        <p className="text-gray-300 mb-10 max-w-2xl mx-auto">
+      <div className="max-w-6xl mx-auto text-center overflow-hidden">
+        <h2 className="text-4xl font-bold text-yellow-500 mb-6" data-aos="fade-left">Contact Us</h2>
+        <p className="text-gray-300 mb-10 max-w-2xl mx-auto" data-aos="fade-right">
           We'd love to hear from you! Whether you have a question about our services, need assistance, or just want to talk security — our team is ready to help.
         </p>
 
@@ -36,14 +44,14 @@ function Contactus() {
           {/* Phone */}
           <div className="flex items-start gap-4">
             <FaPhoneAlt className="text-yellow-500 text-2xl" />
-            <div>
+            <div data-aos="zoom-in-up">
               <h4 className="text-xl font-semibold">Phone</h4>
               <p className="text-gray-300">+92 333 8886978</p>
             </div>
           </div>
 
           {/* Email */}
-          <div className="flex items-start gap-4">
+          <div className="flex items-start gap-4" data-aos="zoom-in-up">
             <FaEnvelope className="text-yellow-500 text-2xl" />
             <div>
               <h4 className="text-xl font-semibold">Email</h4>
@@ -52,7 +60,7 @@ function Contactus() {
           </div>
 
           {/* Location */}
-          <div className="flex items-start gap-4">
+          <div className="flex items-start gap-4" data-aos="zoom-in-up">
             <FaMapMarkerAlt className="text-yellow-500 text-2xl" />
             <div>
               <h4 className="text-xl font-semibold">Location</h4>
@@ -61,7 +69,7 @@ function Contactus() {
           </div>
 
           {/* WhatsApp */}
-          <div className="flex items-start gap-4">
+          <div className="flex items-start gap-4" data-aos="zoom-in-up">
             <FaWhatsapp className="text-yellow-500 text-2xl" />
             <div>
               <h4 className="text-xl font-semibold">WhatsApp</h4>
@@ -70,7 +78,7 @@ function Contactus() {
           </div>
 
           {/* Facebook */}
-          <div className="flex items-start gap-4">
+          <div className="flex items-start gap-4" data-aos="zoom-in-up">
             <FaFacebookF className="text-yellow-500 text-2xl" />
             <div>
               <h4 className="text-xl font-semibold">Facebook</h4>
@@ -81,7 +89,7 @@ function Contactus() {
           </div>
 
           {/* Instagram */}
-          <div className="flex items-start gap-4">
+          <div className="flex items-start gap-4" data-aos="zoom-in-up">
             <FaInstagram className="text-yellow-500 text-2xl" />
             <div>
               <h4 className="text-xl font-semibold">Instagram</h4>

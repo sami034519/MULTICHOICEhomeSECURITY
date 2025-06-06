@@ -1,6 +1,9 @@
 import React from "react";
 import ourstory from "../images/ourstory.jpg";
 import ourstory2 from "../images/ourstory2.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css"; 
+import { useEffect } from "react";
 import {
   FaLock,
   FaHome,
@@ -45,6 +48,12 @@ const cardData = [
 ];
 
 const OurStory = () => {
+   useEffect(() => {
+        AOS.init({
+          duration: 1000, // animation duration in ms
+          once: false, // whether animation should happen only once - while scrolling down
+        });
+      }, []);
   return (
     <>
       <div className="hidden top-32 lg:block relative w-full h-[90vh] overflow-hidden z-30">
@@ -69,40 +78,40 @@ const OurStory = () => {
       <div className="bg-black relative top-20 text-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
           {/* Headings & Paragraphs */}
-          <div className="space-y-12 text-center mb-16">
+          <div className="space-y-12 text-center mb-16 overflow-hidden">
             <div>
-              <h2 className="text-4xl font-bold mb-4 text-yellow-500">
+              <h2 className="text-4xl font-bold mb-4 text-yellow-500" data-aos="fade-left">
                 Our Journey Begins
               </h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
+              <p className="text-gray-300 max-w-2xl mx-auto" data-aos="fade-right">
                 From a small idea to a bold mission, MultiChoice was built on
                 the foundation of innovation, security, and trust. Our goal? To
                 protect homes and empower lives.
               </p>
             </div>
             <div>
-              <h2 className="text-4xl font-bold mb-4 text-yellow-500">
+              <h2 className="text-4xl font-bold mb-4 text-yellow-500" data-aos="fade-left">
                 Driven by Innovation
               </h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
+              <p className="text-gray-300 max-w-2xl mx-auto" data-aos="fade-right">
                 We stay ahead with smart alarm systems, CCTV surveillance, and
                 automated home solutions that redefine modern safety.
               </p>
             </div>
             <div>
-              <h2 className="text-4xl font-bold mb-4 text-yellow-500">
+              <h2 className="text-4xl font-bold mb-4 text-yellow-500" data-aos="fade-left">
                 Powered by Purpose
               </h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
+              <p className="text-gray-300 max-w-2xl mx-auto" data-aos="fade-right">
                 Every solution we offer is designed to make your life safer,
                 simpler, and smarter—from solar energy to fire protection.
               </p>
             </div>
             <div>
-              <h2 className="text-4xl font-bold mb-4 text-yellow-500">
+              <h2 className="text-4xl font-bold mb-4 text-yellow-500" data-aos="fade-left">
                 A Vision for the Future
               </h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
+              <p className="text-gray-300 max-w-2xl mx-auto" data-aos="fade-right">
                 As technology evolves, so do we. We're committed to offering
                 advanced, accessible security that adapts to your world.
               </p>
@@ -115,6 +124,7 @@ const OurStory = () => {
               <div
                 key={idx}
                 className="bg-white text-black rounded-xl shadow-lg p-6 hover:shadow-yellow-500/40 transition duration-300"
+                data-aos="zoom-in-down"
               >
                 <div className="mb-4">{card.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{card.title}</h3>
@@ -125,10 +135,10 @@ const OurStory = () => {
         </div>
       </div>
       <div>
-        <img src={ourstory2} className="w-full mt-20" alt="" />
+        <img src={ourstory2} className="w-full mt-20" data-aos="zoom-in-down" alt="" />
       </div>
       <div>
-        <img src={homestructure} className="w-full" alt="" />
+        <img src={homestructure} className="w-full" data-aos="zoom-in-up" alt="" />
       </div>
     </>
   );
