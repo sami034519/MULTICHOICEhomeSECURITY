@@ -71,10 +71,10 @@ function Introduction() {
               matters most to you.
             </p>
             <div className="lg:mt-7 mt-4">
-              <div className="bg-yellow-500 rounded pt-1" data-aos="flip-up">
+              <div className="bg-yellow-500 w-[162px]  rounded pt-1" data-aos="flip-up">
                 <button
                   onClick={handleClick}
-                  className="bg-black hover:bg-green-800 w-[162px] text-white rounded text-lg font-medium px-4 py-2"
+                  className="bg-black  hover:bg-green-800 w-[162px] text-white rounded text-lg font-medium px-4 py-2"
                   aria-label="Contact Multichoice Home Security on WhatsApp"
                 >
                   CONTACT NOW
