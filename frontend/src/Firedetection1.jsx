@@ -12,28 +12,27 @@ import "aos/dist/aos.css";
 import homestructure from "./images/homestructuref.JPG";
 
 function Firedetection1() {
-  const fireIcons = [
-    <FaBell className="text-4xl text-yellow-400 mb-4" />,
-    <FaFireExtinguisher className="text-4xl text-yellow-400 mb-4" />,
-    <FaShieldAlt className="text-4xl text-yellow-400 mb-4" />,
-  ];
   const fireCards = [
     {
+      icon: <FaBell size={40} className="text-yellow-400 mb-4" />,
       title: "Instant Fire Alerts",
       description:
         "Receive immediate alerts in case of smoke, fire, or heat spikes through connected devices.",
     },
     {
+      icon: <FaFireExtinguisher size={40} className="text-yellow-400 mb-4" />,
       title: "Smart Smoke Detection",
       description:
         "Equipped with advanced sensors to detect smoke and heat with high accuracy and speed.",
     },
     {
+      icon: <FaShieldAlt size={40} className="text-yellow-400 mb-4" />,
       title: "24/7 Emergency Monitoring",
       description:
         "Continuous monitoring with automated emergency response integration and real-time reporting.",
     },
   ];
+
   useEffect(() => {
     AOS.init({
       duration: 700,
@@ -41,6 +40,7 @@ function Firedetection1() {
       mirror: true,
     });
   }, []);
+
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -55,7 +55,7 @@ function Firedetection1() {
         <img
           loading="lazy"
           src={crousal1}
-          alt="Smart Home Security"
+          alt="Fire Alarm Guide showing smoke and heat detection"
           className="w-full h-[90vh] object-cover"
         />
 
@@ -67,43 +67,33 @@ function Firedetection1() {
 
         <div
           className={`absolute pl-20 top-[200px] left-4 transform -translate-y-1/2 text-white transition-all duration-1000 ${
-            animate
-              ? "translate-x-0 opacity-100"
-              : "-translate-x-full opacity-0"
+            animate ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           }`}
         >
           <h1
             className={`lg:text-[80px] text-xl font-semibold lg:mt-28 ${
-              animate
-                ? "animate__animated animate__fadeInDownBig animate__delay-1s"
-                : ""
+              animate ? "animate__animated animate__fadeInDownBig animate__delay-1s" : ""
             }`}
           >
             EARLY WARNING
           </h1>
           <h1
             className={`lg:text-[60px] text-xl font-extrabold lg:mb-1 lg:mt-16 text-yellow-300 ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-2s" : ""
             }`}
           >
             FIRE DETECTION
           </h1>
           <h1
             className={`lg:text-[60px] text-xl font-extrabold mb-2 lg:mb-10 lg:mt-6 text-yellow-300 ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-2s" : ""
             }`}
           >
             SYSTEMS
           </h1>
           <p
             className={`lg:text-lg text-xs w-[40%] ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-3s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-3s" : ""
             }`}
           >
             Protecting What Matters Most — Your Home, Your Safety. Fast,
@@ -122,7 +112,7 @@ function Firedetection1() {
         <img
           loading="lazy"
           src={mobilecrousal1}
-          alt="Smart Home Security Mobile"
+          alt="Fire Alarm Guide Mobile version"
           className="w-full h-[50vh] object-cover"
         />
 
@@ -134,16 +124,12 @@ function Firedetection1() {
 
         <div
           className={`absolute top-[120px] left-4 transform -translate-y-1/2  transition-all duration-1000 ${
-            animate
-              ? "translate-x-0 opacity-100"
-              : "-translate-x-full opacity-0"
+            animate ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           }`}
         >
           <p
             className={`text-5xl font-extrabold mt-3 leading-10 py-4 text-yellow-400 ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-2s" : ""
             }`}
           >
             FIRE DETECTION
@@ -151,8 +137,9 @@ function Firedetection1() {
           </p>
         </div>
       </div>
+
       {/* intro  */}
-      <section className="pt-12 z-30  relative bg-white">
+      <section className="pt-12 z-30 relative bg-white">
         <div className="flex justify-center items-center w-full">
           <h1
             className="lg:text-5xl text-gray-700 text-3xl font-bold border-b-4 border-yellow-500"
@@ -163,11 +150,11 @@ function Firedetection1() {
         </div>
 
         <div className="flex justify-center items-center w-full overflow-hidden">
-          <p
+          <div
             className="text-gray-500 lg:max-w-[50%] max-w-[95%] text-center pt-5"
             data-aos="fade-left"
           >
-            <p className="text-gray-500 py-4" data-aos="fade-left">
+            <p className="py-4" data-aos="fade-left">
               Our advanced Fire Detection Systems provide rapid and reliable
               protection for homes and businesses. Equipped with
               high-sensitivity smoke and heat sensors, intelligent alarm
@@ -178,7 +165,7 @@ function Firedetection1() {
               security setup, mobile alerts, and 24/7 monitoring to ensure your
               safety and peace of mind.
             </p>
-          </p>
+          </div>
         </div>
 
         {/* card  */}
@@ -190,7 +177,7 @@ function Firedetection1() {
                 className="bg-slate-800 rounded-xl p-4 text-center shadow-md hover:shadow-lg transition duration-300"
                 data-aos="zoom-in-down"
               >
-                {fireIcons[index]}
+                {card.icon}
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {card.title}
                 </h3>
@@ -206,7 +193,7 @@ function Firedetection1() {
             <img
               className="lg:max-w-xl max-w-xs"
               src={fence1}
-              alt=""
+              alt="Fire detection sensors installed on fence"
               data-aos="zoom-in-down"
             />
           </div>
@@ -256,7 +243,7 @@ function Firedetection1() {
             <img
               className="lg:max-w-xl max-w-xs"
               src={solarsystem}
-              alt=""
+              alt="Smart fire detection system hardware"
               data-aos="zoom-in-down"
             />
           </div>
@@ -266,7 +253,7 @@ function Firedetection1() {
             <img
               className="lg:max-w-xl max-w-xs"
               src={solarecofriend}
-              alt=""
+              alt="Eco-friendly fire detection device"
               data-aos="zoom-in-down"
             />
           </div>
@@ -291,15 +278,13 @@ function Firedetection1() {
         </div>
 
         {/* home structure */}
-
         <img
           src={homestructure}
           className="lg:w-full w-screen lg:h-[70vh] lg:p-4 pb-4 h-[30vh]"
-          alt=""
+          alt="Home structure with fire safety installation"
           data-aos="zoom-in-down"
         />
       </section>
-      
     </>
   );
 }

@@ -18,7 +18,7 @@ import alarm8 from "./images/alarm8.JPG";
 import homestructure from "./images/homestructuref.JPG";
 
 function Smartalarm() {
-  const benifits = [
+  const benefits = [
     { img: alarm1 },
     { img: alarm2 },
     { img: alarm3 },
@@ -81,47 +81,36 @@ function Smartalarm() {
 
         <div
           className={`absolute top-[200px] left-4 transform -translate-y-1/2 text-white transition-all duration-1000 ${
-            animate
-              ? "translate-x-0 opacity-100"
-              : "-translate-x-full opacity-0"
+            animate ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           }`}
         >
           <h1
             className={`lg:text-[80px] text-xl font-semibold lg:mt-28 ${
-              animate
-                ? "animate__animated animate__fadeInDownBig animate__delay-1s"
-                : ""
+              animate ? "animate__animated animate__fadeInDownBig animate__delay-1s" : ""
             }`}
           >
             UNIQUE ALARMS
           </h1>
           <h1
             className={`lg:text-[60px] text-xl font-extrabold lg:mb-1 lg:mt-16 text-yellow-400 ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-2s" : ""
             }`}
           >
             SMART
           </h1>
           <h1
             className={`lg:text-[60px] text-xl font-extrabold mb-2 lg:mb-10 lg:mt-6 text-yellow-400 ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-2s" : ""
             }`}
           >
             ALARM SYSTEMS
           </h1>
           <p
             className={`lg:text-lg text-xs w-[40%] ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-3s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-3s" : ""
             }`}
           >
-            Protecting What Matters Most — Your Home, Your Peace. Reliable, and
-            scalable
+            Protecting What Matters Most — Your Home, Your Peace. Reliable, and scalable
             <span className="lg:block hidden">
               {" "}
               Smart Security Solutions for Safer Homes.
@@ -147,16 +136,12 @@ function Smartalarm() {
 
         <div
           className={`absolute top-[120px] left-4 transform -translate-y-1/2  transition-all duration-1000 ${
-            animate
-              ? "translate-x-0 opacity-100"
-              : "-translate-x-full opacity-0"
+            animate ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           }`}
         >
           <p
             className={`text-5xl font-extrabold mt-3 leading-10 py-4 text-yellow-600 ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-2s" : ""
             }`}
           >
             SMART <br /> ALARM SYSTEMS
@@ -169,7 +154,6 @@ function Smartalarm() {
             className="lg:text-5xl text-gray-700 text-3xl font-bold border-b-4 border-yellow-500"
             data-aos="zoom-in-down"
           >
-            {" "}
             DIGITAL ALARMS
           </h1>
         </div>
@@ -206,14 +190,13 @@ function Smartalarm() {
           </div>
         </section>
 
-        {/* benifits  */}
+        {/* benefits  */}
         <div className="flex justify-center items-center lg:py-10 pt-4 lg:pt-20 w-full">
           <h1
             className="lg:text-5xl text-gray-700 text-3xl font-bold border-b-4 border-yellow-500"
             data-aos="zoom-in-down"
           >
-            {" "}
-            KEY BENIFITS
+            KEY BENEFITS
           </h1>
         </div>
         <div className="flex justify-center items-center w-full overflow-hidden">
@@ -250,8 +233,8 @@ function Smartalarm() {
 
         <section className="w-full flex justify-center items-center">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
-            {benifits.map((beni, index) => (
-              <div className="py-5 p-2">
+            {benefits.map((beni, index) => (
+              <div key={index} className="py-5 p-2">
                 <img
                   src={beni.img}
                   alt={`Alarm ${index + 1}`}
@@ -264,8 +247,8 @@ function Smartalarm() {
         </section>
         <img
           src={homestructure}
-          className="lg:w-[full] lg:h-auto lg:p-4 h-[30vh]"
-          alt=""
+          className="lg:w-full lg:h-auto lg:p-4 h-[30vh]"
+          alt="Home Structure"
           data-aos="zoom-in-down"
         />
       </section>

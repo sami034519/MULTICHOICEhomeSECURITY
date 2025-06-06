@@ -29,21 +29,24 @@ const Clients = () => {
   ];
 
   return (
-    <div className="w-full px-4 py-10 overflow-hidden">
+    <section
+      className="w-full px-4 py-10 overflow-hidden"
+      aria-label="Our Clients"
+    >
       <div className="whitespace-nowrap relative">
         <div className="animate-scroll flex gap-10">
           {[...clients, ...clients].map((client, index) => (
             <img
               key={index}
               src={client}
-              alt={`client-${index}`}
+              alt={`Client logo ${index + 1}`}
               className="h-12 md:h-20 w-auto object-contain"
               loading="lazy"
             />
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

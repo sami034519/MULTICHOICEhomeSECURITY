@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";  // <-- added react-helmet
 import { FaVideo, FaMobileAlt, FaUserShield } from "react-icons/fa";
 import crousal1 from "./images/HOMECCTV.jpg";
 import mobilecrousal1 from "./images/cctvservice.jpg";
@@ -8,7 +9,6 @@ import darkcctv from "./images/darkcctv.JPG";
 import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 
 import homestructure from "./images/homestructuref.JPG";
 
@@ -33,6 +33,7 @@ function CCTV() {
         "Receive instant notifications for any suspicious activity detected on your premises.",
     },
   ];
+
   useEffect(() => {
     AOS.init({
       duration: 700,
@@ -40,6 +41,7 @@ function CCTV() {
       mirror: true,
     });
   }, []);
+
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -49,6 +51,20 @@ function CCTV() {
 
   return (
     <>
+      <Helmet>
+        <title>Smart Home CCTV Surveillance | MultiChoice Security Solutions</title>
+        <meta
+          name="description"
+          content="Advanced CCTV surveillance for 24/7 monitoring, remote access, and motion detection alerts. Protect your home with MultiChoice's smart security systems."
+        />
+        <meta property="og:title" content="Smart Home CCTV Surveillance" />
+        <meta
+          property="og:description"
+          content="Reliable, scalable CCTV solutions for your home. Monitor remotely and receive alerts anytime, anywhere."
+        />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       {/* Desktop Version */}
       <div className="hidden top-32 lg:block relative w-full h-[90vh] overflow-hidden z-30">
         <img
@@ -66,47 +82,36 @@ function CCTV() {
 
         <div
           className={`absolute top-[200px] left-4 transform -translate-y-1/2 text-white transition-all duration-1000 ${
-            animate
-              ? "translate-x-0 opacity-100"
-              : "-translate-x-full opacity-0"
+            animate ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           }`}
         >
           <h1
             className={`lg:text-[80px] text-xl font-semibold lg:mt-28 ${
-              animate
-                ? "animate__animated animate__fadeInDownBig animate__delay-1s"
-                : ""
+              animate ? "animate__animated animate__fadeInDownBig animate__delay-1s" : ""
             }`}
           >
             RECORDING
           </h1>
           <h1
             className={`lg:text-[60px] text-xl font-extrabold lg:mb-1 lg:mt-16 text-yellow-300 ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-2s" : ""
             }`}
           >
             SMART
           </h1>
           <h1
             className={`lg:text-[60px] text-xl font-extrabold mb-2 lg:mb-10 lg:mt-6 text-yellow-300 ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-2s" : ""
             }`}
           >
             HOME CCTV
           </h1>
           <p
             className={`lg:text-lg text-xs w-[40%] ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-3s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-3s" : ""
             }`}
           >
-            Protecting What Matters Most — Your Home, Your Peace. Reliable, and
-            scalable
+            Protecting What Matters Most — Your Home, Your Peace. Reliable, and scalable
             <span className="lg:block hidden">
               {" "}
               Smart Security Solutions for Safer Homes.
@@ -132,22 +137,19 @@ function CCTV() {
 
         <div
           className={`absolute top-[120px] left-4 transform -translate-y-1/2  transition-all duration-1000 ${
-            animate
-              ? "translate-x-0 opacity-100"
-              : "-translate-x-full opacity-0"
+            animate ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           }`}
         >
           <p
             className={`text-5xl font-extrabold mt-3 leading-10 py-4 text-yellow-300 ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-2s" : ""
             }`}
           >
             SMART <br /> HOME CCTV
           </p>
         </div>
       </div>
+
       <section className="pt-12 z-30  relative bg-white">
         <div className="flex justify-center items-center w-full">
           <h1
@@ -212,7 +214,7 @@ function CCTV() {
                   src={cctvservice2}
                   className="lg:max-w-3xl"
                   data-aos="zoom-in-left"
-                  alt=""
+                  alt="CCTV Remote Access"
                 />
               </div>
             </div>
@@ -220,10 +222,9 @@ function CCTV() {
         </div>
         {/* design */}
         <div className="lg:p-10 p-3 bg-yellow-400">
-          {" "}
-          <img className="w-full" src={cctvservice3} alt="" />
+          <img className="w-full" src={cctvservice3} alt="CCTV Design" />
         </div>
-        {/* benifits  */}
+        {/* benefits */}
         <div className="flex justify-center items-center pt-7 lg:pt-20 w-full">
           <h1
             className="lg:text-5xl text-gray-900 text-center text-4xl font-bold "
@@ -242,7 +243,7 @@ function CCTV() {
             detail is as delicate and real as you can see with your own eyes.
           </p>
         </div>
-        {/* dark cctv image  */}
+        {/* dark cctv image */}
         <div className="w-full flex justify-center items-center pt-10 pb-5 bg-slate-100 mt-10 lg:mt-20">
           <div>
             <div className="flex justify-center items-center w-full">
@@ -263,20 +264,18 @@ function CCTV() {
                 details is captured.
               </p>
             </div>
-            <img src={darkcctv} data-aos="zoom-in-up" alt="" />
+            <img src={darkcctv} data-aos="zoom-in-up" alt="Night Vision CCTV" />
           </div>
         </div>
 
         {/* home structure */}
-
         <img
           src={homestructure}
           className="lg:w-full w-screen lg:h-[70vh] lg:p-4 pb-4 h-[30vh]"
-          alt=""
+          alt="Home Structure"
           data-aos="zoom-in-down"
         />
       </section>
-      
     </>
   );
 }

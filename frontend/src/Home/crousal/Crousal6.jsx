@@ -21,12 +21,12 @@ function Crousal6({ active }) {
 
   return (
     <>
-      <div className=" hidden lg:block relative w-full h-[80vh] overflow-hidden z-30">
+      <section aria-label="CCTV Surveillance Highlights" className="hidden lg:block relative w-full h-[80vh] overflow-hidden z-30">
         {/* Background Image */}
         <img
           loading="lazy"
           src={crousal3}
-          alt="Background"
+          alt="CCTV Surveillance System background"
           className="w-full h-[200px] lg:h-[80vh] object-cover"
         />
 
@@ -35,69 +35,59 @@ function Crousal6({ active }) {
           className={`absolute lg:w-[60%] w-[310px] top-0 left-0 h-[200px] lg:h-[80vh] bg-black bg-opacity-30 transition-all duration-1000 ${
             animate ? "animate__animated animate__backInLeft w-1/2" : "w-0"
           }`}
+          aria-hidden="true"
         ></div>
 
         {/* Text Content */}
-        <div
+        <article
           className={`absolute top-28 lg:top-[200px] left-3 transform -translate-y-1/2 text-white transition-all duration-1000 ${
-            animate
-              ? "translate-x-0 opacity-100"
-              : "-translate-x-full opacity-0"
+            animate ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           }`}
         >
           <h1
             className={`lg:text-[80px] text-xl font-semibold lg:mt-28 ${
-              animate
-                ? "animate__animated animate__fadeInDownBig animate__delay-1s"
-                : ""
+              animate ? "animate__animated animate__fadeInDownBig animate__delay-1s" : ""
             }`}
           >
             ALWAYS WATCHING
           </h1>
           <div>
-            <h1
+            <h2
               className={`lg:text-[60px] text-xl font-extrabold lg:font-bold lg:mb-1 lg:mt-16 text-yellow-400 ${
-                animate
-                  ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                  : ""
+                animate ? "animate__animated animate__lightSpeedInLeft animate__delay-2s" : ""
               }`}
             >
               CCTV
-            </h1>
-            <h1
+            </h2>
+            <h2
               className={`lg:text-[60px] text-xl font-extrabold lg:font-bold mb-2 lg:mb-10 lg:mt-6 text-yellow-400 ${
-                animate
-                  ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                  : ""
+                animate ? "animate__animated animate__lightSpeedInLeft animate__delay-2s" : ""
               }`}
             >
               SURVEILLANCE
-            </h1>
+            </h2>
           </div>
           <p
             className={`lg:text-lg text-xs w-[40%] ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-3s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-3s" : ""
             }`}
           >
-            Our CCTV Surveillance Systems are built to deliver round-the-clock
-            protection .{" "}
+            Our CCTV Surveillance Systems are built to deliver round-the-clock protection.
             <span className="lg:block hidden">
-              we provide customized camera solutions that deter threats, monitor
-              activity, and offer critical footage when it matters most.
+              We provide customized camera solutions that deter threats, monitor activity, and offer critical footage when it matters most.
             </span>
           </p>
-        </div>
-      </div>
+        </article>
+      </section>
+
       {/* mobile  */}
-      <div className=" block lg:hidden relative w-full h-[80vh] overflow-hidden z-30">
+      <section aria-label="Mobile CCTV Surveillance Highlights" className="block lg:hidden relative w-full h-[80vh] overflow-hidden z-30">
         {/* Background Image */}
         <img
           loading="lazy"
           src={homecrousal6}
-          alt="Background"
-          className="w-full  lg:h-[80vh] object-cover"
+          alt="Mobile CCTV Surveillance System background"
+          className="w-full lg:h-[80vh] object-cover"
         />
 
         {/* Overlay Div */}
@@ -105,68 +95,42 @@ function Crousal6({ active }) {
           className={`absolute lg:w-[60%] w-screen top-0 left-0 h-full lg:h-[80vh] bg-black bg-opacity-10 transition-all duration-1000 ${
             animate ? "animate__animated animate__backInLeft w-1/2" : "w-0"
           }`}
+          aria-hidden="true"
         ></div>
 
         {/* Text Content */}
-        <div
+        <article
           className={`absolute top-[200px] lg:top-[200px] left-3 transform -translate-y-1/2 text-white transition-all duration-1000 ${
-            animate
-              ? "translate-x-0 opacity-100"
-              : "-translate-x-full opacity-0"
+            animate ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           }`}
         >
           <h1
             className={`lg:text-[80px] text-2xl font-bold lg:mt-28 ${
-              animate
-                ? "animate__animated animate__fadeInDownBig animate__delay-1s"
-                : ""
+              animate ? "animate__animated animate__fadeInDownBig animate__delay-1s" : ""
             }`}
           >
             ALWAYS WATCHING
           </h1>
-          <p className={`lg:text-[60px] text-5xl font-extrabold mt-3 lg:font-bold leading-10 py-4 lg:mb-1 lg:mt-16 text-yellow-400 ${
-                animate
-                  ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                  : ""
-              }`}>
-            CCTV <br /> SURVEILLANCE
-          </p>
-          {/* <div>
-            <h1
-              className={`lg:text-[60px] text-3xl mb-3 font-extrabold lg:font-bold lg:mb-1 lg:mt-16 text-yellow-400 ${
-                animate
-                  ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                  : ""
-              }`}
-            >
-              CCTV
-            </h1>
-            <h1
-              className={`lg:text-[60px] text-3xl font-extrabold lg:font-bold mb-3 lg:mb-10 lg:mt-6 text-yellow-400 ${
-                animate
-                  ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                  : ""
-              }`}
-            >
-              SURVEILLANCE
-            </h1>
-          </div> */}
           <p
-            className={`lg:text-lg text-sm w-[40%] ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-3s"
-                : ""
+            className={`lg:text-[60px] text-5xl font-extrabold mt-3 lg:font-bold leading-10 py-4 lg:mb-1 lg:mt-16 text-yellow-400 ${
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-2s" : ""
             }`}
           >
-            Our CCTV Surveillance Systems are built to deliver round-the-clock
-            protection .{" "}
+            CCTV <br /> SURVEILLANCE
+          </p>
+
+          <p
+            className={`lg:text-lg text-sm w-[40%] ${
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-3s" : ""
+            }`}
+          >
+            Our CCTV Surveillance Systems are built to deliver round-the-clock protection.
             <span className="lg:block hidden">
-              we provide customized camera solutions that deter threats, monitor
-              activity, and offer critical footage when it matters most.
+              We provide customized camera solutions that deter threats, monitor activity, and offer critical footage when it matters most.
             </span>
           </p>
-        </div>
-      </div>
+        </article>
+      </section>
     </>
   );
 }

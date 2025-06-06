@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaBolt, FaShieldAlt, FaMobileAlt } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 import crousal1 from "./images/electricfenceservice.jpg";
 import mobilecrousal1 from "./images/electricfenceservice.jpg";
 import fence1 from "./images/fencesystem (2).jpeg";
@@ -30,6 +31,7 @@ function Electricfence() {
         "Easily monitor and control your electric fence from anywhere through a dedicated mobile app.",
     },
   ];
+
   useEffect(() => {
     AOS.init({
       duration: 700,
@@ -37,6 +39,7 @@ function Electricfence() {
       mirror: true,
     });
   }, []);
+
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -46,6 +49,20 @@ function Electricfence() {
 
   return (
     <>
+      <Helmet>
+        <title>Electric Fence Security | MultiChoice</title>
+        <meta
+          name="description"
+          content="Advanced electric fence systems with high-voltage deterrence, tamper alerts, and mobile monitoring for ultimate property protection."
+        />
+        <meta property="og:title" content="Electric Fence Security" />
+        <meta
+          property="og:description"
+          content="Protect your home or business with MultiChoice’s smart electric fencing solutions."
+        />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       {/* Desktop Version */}
       <div className="hidden top-32 lg:block relative  w-full h-[90vh] overflow-hidden z-30">
         <img
@@ -63,50 +80,38 @@ function Electricfence() {
 
         <div
           className={`absolute top-[200px] left-4 transform -translate-y-1/2 text-white transition-all duration-1000 ${
-            animate
-              ? "translate-x-0 opacity-100"
-              : "-translate-x-full opacity-0"
+            animate ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           }`}
         >
           <h1
             className={`lg:text-[80px] text-xl pl-10 font-semibold lg:mt-28 ${
-              animate
-                ? "animate__animated animate__fadeInDownBig animate__delay-1s"
-                : ""
+              animate ? "animate__animated animate__fadeInDownBig animate__delay-1s" : ""
             }`}
           >
             SECURE
           </h1>
           <h1
             className={`lg:text-[60px] text-xl pl-10 font-extrabold lg:mb-1 lg:mt-16 text-yellow-400 ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-2s" : ""
             }`}
           >
             HOME ELECTRIC
           </h1>
           <h1
             className={`lg:text-[60px] pl-10 text-xl font-extrabold mb-2 lg:mb-10 lg:mt-6 text-yellow-400 ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-2s" : ""
             }`}
           >
             FENCE
           </h1>
           <p
             className={`lg:text-lg pl-10 text-xs w-[40%] ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-3s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-3s" : ""
             }`}
           >
-            Protecting What Matters Most — Your Home, Your Peace. Reliable, and
-            scalable
+            Protecting What Matters Most — Your Home, Your Peace. Reliable, and scalable
             <span className="lg:block hidden">
-              {" "}
-              Smart Security Solutions for Safer Homes.
+              {" "}Smart Security Solutions for Safer Homes.
             </span>
           </p>
         </div>
@@ -129,22 +134,19 @@ function Electricfence() {
 
         <div
           className={`absolute top-[120px] left-4 transform -translate-y-1/2  transition-all duration-1000 ${
-            animate
-              ? "translate-x-0 opacity-100"
-              : "-translate-x-full opacity-0"
+            animate ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           }`}
         >
           <p
             className={`text-5xl font-extrabold mt-3 leading-10 py-4 text-yellow-400 ${
-              animate
-                ? "animate__animated animate__lightSpeedInLeft animate__delay-2s"
-                : ""
+              animate ? "animate__animated animate__lightSpeedInLeft animate__delay-2s" : ""
             }`}
           >
             SECURE <br /> ELECTRIC FENCE
           </p>
         </div>
       </div>
+
       {/* intro  */}
       <section className="pt-12 z-30  relative bg-white">
         <div className="flex justify-center items-center w-full">
@@ -181,9 +183,7 @@ function Electricfence() {
                 data-aos="zoom-in-down"
               >
                 {card.icon}
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {card.title}
-                </h3>
+                <h3 className="text-xl font-semibold text-white mb-2">{card.title}</h3>
                 <p className="text-white text-sm">{card.description}</p>
               </div>
             ))}
@@ -196,7 +196,7 @@ function Electricfence() {
             <img
               className="lg:max-w-xl max-w-xs"
               src={fence1}
-              alt=""
+              alt="Electric Fence System"
               data-aos="zoom-in-down"
             />
           </div>
@@ -225,15 +225,13 @@ function Electricfence() {
         </div>
 
         {/* home structure */}
-
         <img
           src={homestructure}
           className="lg:w-full w-screen lg:h-[70vh] lg:p-4 pb-4 h-[30vh]"
-          alt=""
+          alt="Home Structure"
           data-aos="zoom-in-down"
         />
       </section>
-    
     </>
   );
 }
