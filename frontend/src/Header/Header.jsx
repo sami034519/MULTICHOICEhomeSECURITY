@@ -20,7 +20,7 @@ import { NavLink, Link } from "react-router-dom";
 import logo from "../images/mysecuritylogofinal.png";
 
 function Header() {
-  const phoneNumber = "923330685543";
+  const phoneNumber = "923338886978";
   const message = "Greetings To DevMotive! I Want To Know About Your Services..";
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -100,21 +100,21 @@ function Header() {
         <div id="topbar" className="bg-yellow-500 px-4 py-2 flex justify-between lg:justify-around items-center text-black text-lg">
           <div className="lg:flex hidden items-center space-x-4">
             <div className="flex items-center gap-1 border-r-2 border-white pr-3">
-              <FaPhoneAlt className="text-green-400" /><span>+1 234 567 890</span>
+              <FaPhoneAlt className="text-green-400" /><span>+923338886978</span>
             </div>
             <div className="flex items-center gap-1 border-r-2 border-white pr-3">
-              <FaWhatsapp className="text-green-500" /><span>+1 987 654 321</span>
+              <FaWhatsapp className="text-green-500" /><span>+923338886978</span>
             </div>
             <div className="flex items-center gap-1 pr-3">
-              <MdEmail className="text-red-400" /><span>example@gmail.com</span>
+              <MdEmail className="text-red-400" /><span>mcsolutions54@gmail.com</span>
             </div>
           </div>
           <div className="flex items-center space-x-2">
-            <a href="https://facebook.com" aria-label="Facebook"><FaFacebookF className="text-blue-500 bg-white text-3xl p-1 rounded-lg" /></a>
-            <a href="https://instagram.com" aria-label="Instagram"><FaInstagram className="text-red-500 bg-white text-3xl p-1 rounded-lg" /></a>
-            <a href="https://google.com" aria-label="Google"><FcGoogle className="text-3xl p-1  bg-whiterounded-lg" /></a>
-            <a href="https://linkedin.com" aria-label="LinkedIn"><FaLinkedinIn className="text-blue-600 bg-white text-3xl p-1 rounded-lg" /></a>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsapp className="text-green-500 bg-white text-3xl p-1 rounded-lg" /></a>
+            <a href="https://facebook.com" aria-label="Facebook"><FaFacebookF className="text-blue-500 bg-white text-3xl p-1 rounded" /></a>
+            <a href="https://instagram.com" aria-label="Instagram"><FaInstagram className="text-red-500 bg-white text-3xl p-1 rounded" /></a>
+            <a href="https://google.com" aria-label="Google"><FcGoogle className="text-3xl bg-white rounded p-1  bg-whiterounded-lg" /></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn"><FaLinkedinIn className="text-blue-600 bg-white text-3xl p-1 rounded" /></a>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsapp className="text-green-500 bg-white text-3xl p-1 rounded" /></a>
             <button onClick={() => window.open(whatsappUrl)} className="bg-black text-white px-2 py-2 rounded hover:bg-green-600 transition text-sm lg:text-base">
               <FaPhoneAlt className="inline mr-2" />CONTACT NOW
             </button>

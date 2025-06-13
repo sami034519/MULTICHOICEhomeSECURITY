@@ -34,7 +34,7 @@ function Footer() {
 
   const [status, setStatus] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const phoneNumber = "923330685543";
+  const phoneNumber = "923338886978";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -125,7 +125,7 @@ function Footer() {
             </div>
           ) : (
             status && (
-              <p className="text-center text-lg mt-4 bg-white text-black font-medium">{status}</p>
+              <p className="text-center text-lg mt-4 text-black font-medium">{status}</p>
             )
           )}
         </form>
